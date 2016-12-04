@@ -12,9 +12,6 @@
 #import "RCTBundleURLProvider.h"
 #import "RCTRootView.h"
 
-//react-native-orientation library import
-#import "Orientation.h"
-
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -36,9 +33,5 @@
   [self.window makeKeyAndVisible];
   return YES;
 }
-
-// added for the react-native-orientation library
-- (UIInterfaceOrientationMask)application:(UIApplication *)application supportedInterfaceOrientationsForWindow:(UIWindow *)window {
-    return [Orientation getOrientation];
 
 @end

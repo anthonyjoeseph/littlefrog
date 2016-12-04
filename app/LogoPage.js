@@ -4,7 +4,8 @@ import React, { Component } from 'react';
 import {
   StyleSheet,
   Text,
-  View
+  View,
+  Image
 } from 'react-native';
 
 import Button from 'react-native-button'
@@ -12,6 +13,7 @@ import Button from 'react-native-button'
 import { Actions } from 'react-native-router-flux';
 
 const LogoPage = () => {
+
   return (
     <View style={styles.container}>
       <View style={{flex:0.5, justifyContent: 'flex-end'}}>
@@ -24,13 +26,13 @@ const LogoPage = () => {
           <Button
             containerStyle={{padding:5, height:45, overflow:'hidden', borderRadius:40, backgroundColor: 'white'}}
             style={{flex:3, textAlign: 'center', backgroundColor: '#FFFFFF', color: 'red', fontSize:40}}
-            onPress={() => Actions.bookReader()}
+            onPress={() => Actions.joinUsPage()}
           >Join us!</Button>
           <View style={{flex:1}}></View>
           <Button
             containerStyle={{padding:5, height:45, overflow:'hidden', borderRadius:40, backgroundColor: 'white'}}
             style={{flex:3, textAlign: 'center', backgroundColor: '#FFFFFF', color: 'red', fontSize:40}}
-            onPress={() => Actions.bookReader()}
+            onPress={() => Actions.bookInfoPage()}
           >Proceed</Button>
           <View style={{flex:2}}></View>
         </View>

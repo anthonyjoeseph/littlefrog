@@ -6,13 +6,15 @@ import {
   Text,
   View,
   Dimensions,
-  Image
+  Image,
+  ScrollView
 } from 'react-native';
 
 import ViewPager from 'react-native-viewpager';
 
-var deviceWidth = Dimensions.get('window').width;
-var deviceHeight = Dimensions.get('window').height;
+import Button from 'react-native-button';
+
+import Sound from 'react-native-sound';
 
 var IMGS = [
   require('./pages/Page1.png'),
@@ -34,7 +36,6 @@ var IMGS = [
 
 
 class BookReader extends Component {
-
   constructor(props) {
     super(props)
     var dataSource = new ViewPager.DataSource({
@@ -44,11 +45,30 @@ class BookReader extends Component {
     this.loadData();
 
     this.state = {
+      dimensions: {
+        x: -1,
+        y: -1,
+        width: -1,
+        height: -1
+      },
       dataSource: dataSource.cloneWithPages(IMGS),
       caption: this.textForPages[0]
     };
 
     this._onChangePage = this._onChangePage.bind(this)
+    this._renderPage = this._renderPage.bind(this)
+
+    this.music = new Sound('gunshot.wav', Sound.MAIN_BUNDLE, (error) => {
+      if (error) {
+        console.log('failed to load the sound', error);
+      } else { // loaded successfully
+        console.log('duration in seconds: ' + this.music.getDuration() +
+            'number of channels: ' + this.music.getNumberOfChannels());
+      }
+    });
+
+    console.log(Sound.MAIN_BUNDLE);
+
   }
 
   loadData(){
@@ -74,15 +94,43 @@ class BookReader extends Component {
 
   render() {
     return (
-      <View style={{flex:1}}>
-        <ViewPager
-          style={styles.pager}
-          dataSource={this.state.dataSource}
-          renderPage={this._renderPage}
-          onChangePage={this._onChangePage}
-          isLoop={false}
-          autoPlay={false}/>
-          <View style={{flex:1, backgroundColor: 'yellow'}}><Text>{this.state.caption}</Text></View>
+      <View style={{flex:1, flexDirection:'column', backgroundColor: '#1586BA'}}>
+        <View style={{flex:1, flexDirection:'row'}}>
+          <View style={{flex:0.1}} />
+          <View style={{flex:1}} onLayout={(event) => {
+            this.state.dimensions = event.nativeEvent.layout;
+          }}>
+            <ViewPager
+              style={styles.pager}
+              dataSource={this.state.dataSource}
+              renderPage={this._renderPage}
+              onChangePage={this._onChangePage}
+              isLoop={false}
+              autoPlay={false}/>
+          </View>
+          <View style={{flex:0.1}} />
+          <Text style={{
+              position:'absolute',
+              backgroundColor: '#FFFFFF',
+              color: 'red',
+              fontSize:40,
+              top:0, right: 0
+            }}
+            onPress={() => {
+              this.music.play((success) => {
+                if (success) {
+                  console.log('successfully finished playing');
+                } else {
+                  console.log('playback failed due to audio decoding errors');
+                }
+              });
+            }}>play audio</Text>
+        </View>
+        <View style={styles.textArea}>
+          <ScrollView>
+            <Text style={{color:'white'}}>{this.state.caption}</Text>
+          </ScrollView>
+        </View>
       </View>
     );
   }
@@ -91,9 +139,19 @@ class BookReader extends Component {
     data: Object,
     pageID: number | string,) {
     return (
-      <Image
-        source={data}
-        style={styles.page} />
+      <View style={
+        {
+          width: this.state.dimensions.width,
+          height: this.state.dimensions.height,
+          flexDirection: 'column',
+          justifyContent:'center',
+          alignItems:'stretch'
+        }}>
+        <Image
+          resizeMode='contain'
+          source={data}
+          style={{flex:1, width: null}} />
+      </View>
     );
   }
 
@@ -107,12 +165,15 @@ class BookReader extends Component {
 
 
 var styles = StyleSheet.create({
+  pagerHolder: {
+    flex: 1,
+  },
   pager: {
-    flex:3
+    flex:1
   },
-  page: {
-    width: deviceWidth
-  },
+  textArea: {
+    flex:0.25
+  }
 });
 
 export default BookReader;

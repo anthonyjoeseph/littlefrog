@@ -1,10 +1,11 @@
 // app/index.js
 
 import React, { Component } from 'react';
-import { Router, Scene } from 'react-native-router-flux';
+import { Router, Scene, Modal } from 'react-native-router-flux';
 
 import LogoPage from './LogoPage';
 import BookReader from './BookReader';
+import BookInfoPage from './BookInfoPage';
 
 const App = () => {
   return (
@@ -17,12 +18,18 @@ const App = () => {
           initial
         />
         <Scene
+          key="bookInfoPage"
+          component={BookInfoPage}
+          title="Book"
+          animation='fade'
+        />
+        <Scene
           key="bookReader"
           component={BookReader}
           title="Book"
           animation='fade'
         />
-      </Scene>
+        </Scene>
     </Router>
   );
 }
