@@ -26,7 +26,7 @@ const LogoPage = () => {
           <Button
             containerStyle={{padding:5, height:45, overflow:'hidden', borderRadius:40, backgroundColor: 'white'}}
             style={{flex:3, textAlign: 'center', backgroundColor: '#FFFFFF', color: 'red', fontSize:40}}
-            onPress={() => Actions.joinUsPage()}
+            onPress={() => Actions.bookInfoPage()}
           >Join us!</Button>
           <View style={{flex:1}}></View>
           <Button

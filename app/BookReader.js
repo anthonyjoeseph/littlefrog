@@ -7,10 +7,15 @@ import {
   View,
   Dimensions,
   Image,
-  ScrollView
+  ScrollView,
+  TouchableHighlight
 } from 'react-native';
 
+import { Actions } from 'react-native-router-flux';
+
 import ViewPager from 'react-native-viewpager';
+
+import SvgUri from 'react-native-svg-uri';
 
 import Button from 'react-native-button';
 
@@ -150,7 +155,12 @@ class BookReader extends Component {
         <Image
           resizeMode='contain'
           source={data}
-          style={{flex:1, width: null}} />
+          style={{flex:1, width: null, justifyContent:'center', alignItems:'center'}}>
+          <TouchableHighlight onPress={() => console.log("Great! Pressing works!")}>
+            <SvgUri width="100" height="100"
+                     source={require('./black-rectangle.svg')}  />
+          </TouchableHighlight>
+        </Image>
       </View>
     );
   }
