@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 import { Router, Scene, Modal } from 'react-native-router-flux';
 
 import LogoPage from './LogoPage';
-import BookReader from './BookReader';
+import BookReader from './BookReader/BookReader';
 import BookInfoPage from './BookInfoPage';
 import JoinUsPage from './JoinUsPage';
 

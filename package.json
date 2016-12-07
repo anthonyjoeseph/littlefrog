@@ -19,7 +19,7 @@
     "react-native-router-flux": "^3.37.0",
     "react-native-sound": "^0.8.3",
     "react-native-svg-uri": "0.0.3",
-    "react-native-viewpager": "^0.2.13"
+    "rn-viewpager": "^1.1.4"
   },
   "jest": {
     "preset": "jest-react-native"
