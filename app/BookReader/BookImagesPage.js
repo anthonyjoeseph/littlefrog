@@ -12,6 +12,23 @@ import {
 import SvgUri from 'react-native-svg-uri';
 
 class BookImagesPage extends Component{
+  constructor(props){
+    super(props);
+    this.quizButton = this.quizButton.bind(this);
+  }
+  quizButton(){
+    if(this.props.hasButton){
+      return (
+        <TouchableHighlight onPress={function(){this.props.onQuizSelect()}.bind(this)}>
+          <SvgUri width="100" height="100"
+                   source={require('./black-rectangle.svg')}  />
+        </TouchableHighlight>
+      );
+    }else{
+      return null;
+    }
+  }
+
   render(){
       return (
         <View style={
@@ -26,10 +43,7 @@ class BookImagesPage extends Component{
             resizeMode='contain'
             source={this.props.source}
             style={{flex:1, width: null, justifyContent:'center', alignItems:'center'}}>
-            <TouchableHighlight onPress={function(){this.props.onQuizSelect()}.bind(this)}>
-              <SvgUri width="100" height="100"
-                       source={require('./black-rectangle.svg')}  />
-            </TouchableHighlight>
+            {this.quizButton()}
           </Image>
         </View>
       );

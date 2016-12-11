@@ -20,15 +20,16 @@ class BookImages extends Component {
                         {width: this.props.width, height: this.props.height}
                       ]
                     }
-                    indicator={<PagerDotIndicator pageCount={this.props.pageFileNames.length} />}
+                    indicator={<PagerDotIndicator pageCount={this.props.pagesData.length} />}
                     onPageScroll={this.props.onPageScroll}>
           {
-            this.props.pageFileNames.map(
-              function(pageFileName, index){
+            this.props.pagesData.map(
+              function(page, index){
                 return (
-                  <View key={pageFileName} style={{width:this.props.width, height:this.props.height}}>
+                  <View key={page.fileName} style={{width:this.props.width, height:this.props.height}}>
                     <BookImagesPage
-                      source={{uri: pageFileName}}
+                      source={{uri: page.fileName}}
+                      hasButton={page.hasButton}
                       onQuizSelect={() => {this.props.onQuizSelect(index)}}
                       width={this.props.width}
                       height={this.props.height} />

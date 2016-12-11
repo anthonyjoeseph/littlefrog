@@ -7,6 +7,7 @@ import LogoPage from './LogoPage';
 import BookReader from './BookReader/BookReader';
 import BookInfoPage from './BookInfoPage';
 import JoinUsPage from './JoinUsPage';
+import QuizPage from './QuizPage';
 
 const App = () => {
   return (
@@ -17,7 +18,6 @@ const App = () => {
             component={LogoPage}
             title="Logo"
             animation='fade'
-            initial
           />
           <Scene
             key="bookInfoPage"
@@ -30,14 +30,16 @@ const App = () => {
             component={BookReader}
             title="Book"
             animation='fade'
+            initial
           />
-          </Scene>
-          <Scene
-            key="joinUsPage"
-            component={JoinUsPage}
-            direction='vertical'/>
         </Scene>
-
+        <Modal
+          key="joinUsPage"
+          component={JoinUsPage}/>
+        <Modal
+          key="quizPage"
+          component={QuizPage}/>
+      </Scene>
     </Router>
   );
 }

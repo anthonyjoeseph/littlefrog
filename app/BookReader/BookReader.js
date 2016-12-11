@@ -35,7 +35,7 @@ class BookReader extends Component {
       picWidth: height * this.picAspectRatio,
       caption: this.textForPages[0],
       picAspectRatio: this.picAspectRatio,
-      pageFileNames: this.pageFileNames,
+      pagesData: this.pagesData,
       language: "en"
     };
 
@@ -48,33 +48,26 @@ class BookReader extends Component {
     var textForPagesData = require('./BookTextEng.json');
     this.textForPages = textForPagesData.text;
 
-    var picData = require('./BookPicData.json');
-    this.picAspectRatio = picData.aspectRatio;
-    this.pageFileNames = picData.pageFileNames;
+    var bookData = require('./BookData.json');
+    this.picAspectRatio = bookData.aspectRatio;
+    this.pagesData = bookData.pages;
   }
 
   render() {
     return (
       <View style={{flex:1, flexDirection:'row'}}>
         <InteractionPanel
-          style={
-            {
-              zIndex: 2,
-              flex: 1
-            }
-          }
+          style={styles.interactionPanel}
           onPressHome={() => {Actions.bookInfoPage()}}
           onPressVoice={() => {this.refs.languagePanel.slide()}}
           onPressText={() => {this.refs.slidingText.slide()}}/>
         <LanguagePanel
           ref="languagePanel"
-          style={
-            {
-              position: 'absolute',
-              zIndex: 1,
-              top: (this.state.dimensions.height/2) - (100/2),
-              height: 100
-            }
+          style={[styles.languagePanel,
+              {
+                top: (this.state.dimensions.height/2) - (100/2)
+              }
+            ]
           }
           onChangeLanguage={
             function(newLanguage){
@@ -89,30 +82,19 @@ class BookReader extends Component {
               position:'absolute',
               zIndex: 1,
               bottom: 0,
-              width: this.state.picWidth,
-              height: 100
+              height: 100,
+              width: this.state.picWidth
             }
           }
           caption={this.state.caption} />
         <PlayButton
-          style={
-            {
-              position: 'absolute',
-              zIndex: 1,
-              top: 0,
-              right: 50
-            }
-          }
+          style={styles.playButton}
           language={this.state.language}
         />
         <BookImages
-          style={
-            {
-              zIndex: 0
-            }
-          }
-          pageFileNames={this.state.pageFileNames}
+          style={styles.bookImages}
           onPageScroll={this._onChangePage}
+          pagesData={this.state.pagesData}
           onQuizSelect={this._onQuizSelect}
           width={this.state.picWidth}
           height={this.state.dimensions.height} />
@@ -130,12 +112,38 @@ class BookReader extends Component {
     });
   }
   _onQuizSelect(index){
-    console.log(index);
+    Actions.quizPage(
+      {
+        "question" : this.state.pagesData[index].questionsData.question,
+        "options" : this.state.pagesData[index].questionsData.options,
+        "correctIndex" : this.state.pagesData[index].questionsData.correctIndex
+      }
+    );
   }
 }
 
 
-var styles = StyleSheet.create({
+const styles = StyleSheet.create({
+  interactionPanel:{
+    zIndex: 2,
+    flex: 1
+  },
+  languagePanel:{
+    position: 'absolute',
+    zIndex: 1,
+    height: 100
+  },
+  bookText:{
+  },
+  playButton:{
+    position: 'absolute',
+    zIndex: 1,
+    top: 0,
+    right: 50
+  },
+  bookImages:{
+    zIndex: 0
+  }
 });
 
 export default BookReader;
