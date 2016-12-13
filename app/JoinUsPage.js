@@ -37,7 +37,8 @@ class JoinUsPage extends Component {
               editable = {true}/>
               <Button
                 containerStyle={{padding:5, height:45, overflow:'hidden', borderRadius:40, backgroundColor: 'white'}}
-                style={{flex:3, textAlign: 'center', backgroundColor: '#000000', color: 'white', fontSize:20}}>SUBMIT</Button>
+                style={{flex:3, textAlign: 'center', backgroundColor: '#000000', color: 'white', fontSize:20}}
+                onPress={() => {Actions.pop();}}>SUBMIT</Button>
           </View>
         </View>
       </DismissableFullscreenPopup>

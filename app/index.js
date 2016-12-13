@@ -18,6 +18,7 @@ const App = () => {
             component={LogoPage}
             title="Logo"
             animation='fade'
+            initial
           />
           <Scene
             key="bookInfoPage"
@@ -30,7 +31,6 @@ const App = () => {
             component={BookReader}
             title="Book"
             animation='fade'
-            initial
           />
         </Scene>
         <Modal

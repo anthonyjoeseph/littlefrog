@@ -9,7 +9,33 @@
     },
     {
       "fileName" : "page3",
-      "hasButton": true,
+      "animations" : [
+        {
+          "rect" :{
+            "x" : 120,
+            "y" : 120,
+            "width" : 70,
+            "height" : 60
+          },
+          "durationMillis": 100,
+          "frames" : [
+              "frame0",
+              "frame1",
+              "frame2",
+              "frame3",
+              "frame4",
+              "frame5",
+              "frame6",
+              "frame7",
+              "frame8",
+              "frame9",
+              "frame10",
+              "frame11",
+              "frame12",
+              "frame13"
+          ]
+        }
+      ],
       "questionsData" : {
         "question" : "What is my favorite food?",
         "options" : [

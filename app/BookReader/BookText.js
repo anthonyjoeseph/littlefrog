@@ -12,9 +12,13 @@ class BookText extends Component{
   constructor(props){
     super(props);
     this.state = {
-      translateAnim: new Animated.Value(1),
-      isVisible: true
+      translateAnim: new Animated.Value(0),
+      isVisible: false
     };
+  }
+
+  componentDidMount(){
+    this.slide();
   }
 
   slide(){

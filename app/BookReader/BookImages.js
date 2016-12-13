@@ -29,6 +29,7 @@ class BookImages extends Component {
                   <View key={page.fileName} style={{width:this.props.width, height:this.props.height}}>
                     <BookImagesPage
                       source={{uri: page.fileName}}
+                      animations={page.animations}
                       hasButton={page.hasButton}
                       onQuizSelect={() => {this.props.onQuizSelect(index)}}
                       width={this.props.width}

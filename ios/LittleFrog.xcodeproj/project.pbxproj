@@ -25,7 +25,7 @@
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 		953BD8B81DF4C450005A0B53 /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 95E1E2AC1DF4C33D0053B0D2 /* libRCTAnimation.a */; };
 		9541E84E1DEDF2EE003D667F /* libRNSound.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 954DCC9B1DEDF22700A8EBA2 /* libRNSound.a */; };
-		9541E8621DEDF3B2003D667F /* gunshot.wav in Resources */ = {isa = PBXBuildFile; fileRef = 9541E8611DEDF3B2003D667F /* gunshot.wav */; };
+		955774C61DFF103B0079EC6A /* gunshot.wav in Resources */ = {isa = PBXBuildFile; fileRef = 955774C51DFF103B0079EC6A /* gunshot.wav */; };
 		9AD0A3C8B14B45E897D2FDE3 /* libRNSVG.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 17C5F57985034D31A3B45C25 /* libRNSVG.a */; };
 /* End PBXBuildFile section */
 
@@ -210,8 +210,8 @@
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		799B64656C46489EA47DDAAB /* RNSVG.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNSVG.xcodeproj; path = "../node_modules/react-native-svg/ios/RNSVG.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
-		9541E8611DEDF3B2003D667F /* gunshot.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = gunshot.wav; path = ../android/app/src/main/res/raw/gunshot.wav; sourceTree = "<group>"; };
 		954DCC851DEDF22600A8EBA2 /* RNSound.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNSound.xcodeproj; path = "../node_modules/react-native-sound/RNSound.xcodeproj"; sourceTree = "<group>"; };
+		955774C51DFF103B0079EC6A /* gunshot.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = gunshot.wav; sourceTree = "<group>"; };
 		95E1E2A61DF4C33D0053B0D2 /* RCTAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAnimation.xcodeproj; path = "../node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -327,7 +327,7 @@
 		13B07FAE1A68108700A75B9A /* LittleFrog */ = {
 			isa = PBXGroup;
 			children = (
-				9541E8601DEDF3A8003D667F /* res */,
+				955774C41DFF103B0079EC6A /* res */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
@@ -407,20 +407,21 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		9541E8601DEDF3A8003D667F /* res */ = {
-			isa = PBXGroup;
-			children = (
-				9541E8611DEDF3B2003D667F /* gunshot.wav */,
-			);
-			name = res;
-			sourceTree = "<group>";
-		};
 		954DCC861DEDF22600A8EBA2 /* Products */ = {
 			isa = PBXGroup;
 			children = (
 				954DCC9B1DEDF22700A8EBA2 /* libRNSound.a */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		955774C41DFF103B0079EC6A /* res */ = {
+			isa = PBXGroup;
+			children = (
+				955774C51DFF103B0079EC6A /* gunshot.wav */,
+			);
+			name = res;
+			path = LittleFrog/res;
 			sourceTree = "<group>";
 		};
 		95E1E28F1DF4C2250053B0D2 /* Products */ = {
@@ -729,7 +730,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9541E8621DEDF3B2003D667F /* gunshot.wav in Resources */,
+				955774C61DFF103B0079EC6A /* gunshot.wav in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
 			);

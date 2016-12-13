@@ -108,7 +108,7 @@ class BookReader extends Component {
       currentPage++;
     }
     this.setState({
-      caption: this.textForPages[currentPage]
+      caption: "page #" + currentPage + "\n" + this.textForPages[currentPage]
     });
   }
   _onQuizSelect(index){

@@ -46,11 +46,11 @@ class BookInfoPage extends Component {
           <View style={{flexDirection:'row', justifyContent:'center', alignItems:'stretch'}}>
             <View style={{flex: 1, flexDirection: 'row', justifyContent: 'flex-end'}}>
             <AImage
-                 resizeMode='stretch'
-                 animationRepeatCount= {0}
-                 animationDuration={100}
-                 animationImages={this.animationImages}
-                 style={{width:100, height:100}} />
+                   resizeMode='stretch'
+                   animationRepeatCount= {0}
+                   animationDuration={100}
+                   animationImages={this.animationImages}
+                   style={{width:100, height:100}} />
             </View>
             <Text style={{flex: 1, color:'white'}}>This is a traditional story from Korea. Millstone is a rock that grinds the grains into powder. Discover what a magical millstone can do and learn why the ocean is so salty! Remember to flip the page whenever you hear the chime.</Text>
           </View>
@@ -64,7 +64,15 @@ class BookInfoPage extends Component {
   }
 }
 
-//
+/*
+<AImage
+       resizeMode='stretch'
+       animationRepeatCount= {0}
+       animationDuration={100}
+       animationImages={this.animationImages}
+       style={{width:null, height:null}} />
+
+*/
 
 const styles = StyleSheet.create({
   container: {
