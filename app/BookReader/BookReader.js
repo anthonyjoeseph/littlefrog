@@ -102,21 +102,17 @@ class BookReader extends Component {
     );
   }
 
-  _onChangePage(nativeEvent){
-    var currentPage = nativeEvent.position;
-    if(nativeEvent.offset > 0){
-      currentPage++;
-    }
+  _onChangePage(page){
     this.setState({
-      caption: "page #" + currentPage + "\n" + this.textForPages[currentPage]
+      caption: "page #" + page + "\n" + this.textForPages[page]
     });
   }
   _onQuizSelect(index){
     Actions.quizPage(
       {
-        "question" : this.state.pagesData[index].questionsData.question,
-        "options" : this.state.pagesData[index].questionsData.options,
-        "correctIndex" : this.state.pagesData[index].questionsData.correctIndex
+        "question" : this.state.pagesData[index].questions.question,
+        "options" : this.state.pagesData[index].questions.options,
+        "correctIndex" : this.state.pagesData[index].questions.correctIndex
       }
     );
   }

@@ -19,20 +19,15 @@ class BookInfoPage extends Component {
   constructor(props) {
     super(props)
     this.animationImages = [
-      require('./animation/frame_0_delay-0.1s.gif'),
-      require('./animation/frame_1_delay-0.1s.gif'),
-      require('./animation/frame_2_delay-0.1s.gif'),
-      require('./animation/frame_3_delay-0.1s.gif'),
-      require('./animation/frame_4_delay-0.1s.gif'),
-      require('./animation/frame_5_delay-0.1s.gif'),
-      require('./animation/frame_6_delay-0.1s.gif'),
-      require('./animation/frame_7_delay-0.1s.gif'),
-      require('./animation/frame_8_delay-0.1s.gif'),
-      require('./animation/frame_9_delay-0.1s.gif'),
-      require('./animation/frame_10_delay-0.1s.gif'),
-      require('./animation/frame_11_delay-0.1s.gif'),
-      require('./animation/frame_12_delay-0.1s.gif'),
-      require('./animation/frame_13_delay-0.1s.gif')
+      {uri: 'frame1'},
+      {uri: 'frame2'},
+      {uri: 'frame3'},
+      {uri: 'frame4'},
+      {uri: 'frame5'},
+      {uri: 'frame6'},
+      {uri: 'frame7'},
+      {uri: 'frame8'},
+      {uri: 'frame9'}
     ];
   }
   render() {
@@ -45,12 +40,10 @@ class BookInfoPage extends Component {
         <View style={styles.buttons}>
           <View style={{flexDirection:'row', justifyContent:'center', alignItems:'stretch'}}>
             <View style={{flex: 1, flexDirection: 'row', justifyContent: 'flex-end'}}>
-            <AImage
-                   resizeMode='stretch'
-                   animationRepeatCount= {0}
-                   animationDuration={100}
-                   animationImages={this.animationImages}
-                   style={{width:100, height:100}} />
+              <Image
+                source={{uri:'spongebob'}}
+                style={{width:100, height:100}}
+              />
             </View>
             <Text style={{flex: 1, color:'white'}}>This is a traditional story from Korea. Millstone is a rock that grinds the grains into powder. Discover what a magical millstone can do and learn why the ocean is so salty! Remember to flip the page whenever you hear the chime.</Text>
           </View>
@@ -70,8 +63,7 @@ class BookInfoPage extends Component {
        animationRepeatCount= {0}
        animationDuration={100}
        animationImages={this.animationImages}
-       style={{width:null, height:null}} />
-
+       style={{width:100, height:100}} />
 */
 
 const styles = StyleSheet.create({

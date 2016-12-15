@@ -10,7 +10,6 @@ import {
 } from 'react-native';
 
 import SvgUri from 'react-native-svg-uri';
-import AImage from 'react-native-image-animation';
 
 class BookImagesPage extends Component{
   constructor(props){
@@ -18,7 +17,7 @@ class BookImagesPage extends Component{
     this.quizButton = this.quizButton.bind(this);
   }
   quizButton(){
-    if(this.props.hasButton){
+    if(this.props.questions){
       return (
         <TouchableHighlight onPress={function(){this.props.onQuizSelect()}.bind(this)}>
           <SvgUri width="100" height="100"
@@ -33,29 +32,21 @@ class BookImagesPage extends Component{
   animations(){
     if(this.props.animations){
       return this.props.animations.map(
-        function(animation){
+        function(animation, index){
           return (
-          <AImage
-               key={animation.frames[0]}
-               resizeMode='stretch'
-               animationRepeatCount= {0}
-               animationDuration={ animation.durationMillis }
-               animationImages={
-                animation.frames.map(
-                  function(frame){
-                   return ( {uri:frame} );
-                  }
-                )
-               }
-               style={
-                 {
-                   position:'absolute',
-                   left: animation.rect.x,
-                   bottom: animation.rect.y,
-                   width: animation.rect.width,
-                   height:animation.rect.height
-                 }
-               } />
+            <Image
+              key={index}
+              source={{uri: animation.resource}}
+              style={
+                {
+                  position:'absolute',
+                  left: animation.rect.x,
+                  bottom: animation.rect.y,
+                  width: animation.rect.width,
+                  height:animation.rect.height
+                }
+              }
+            />
           );
         }.bind(this)
       );
@@ -78,8 +69,8 @@ class BookImagesPage extends Component{
             resizeMode='contain'
             source={this.props.source}
             style={{flex:1, width: null, justifyContent:'center', alignItems:'center'}}>
-            {this.quizButton()}
             {this.animations()}
+            {this.quizButton()}
           </Image>
         </View>
       );

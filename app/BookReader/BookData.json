@@ -17,26 +17,19 @@
             "width" : 70,
             "height" : 60
           },
-          "durationMillis": 100,
-          "frames" : [
-              "frame0",
-              "frame1",
-              "frame2",
-              "frame3",
-              "frame4",
-              "frame5",
-              "frame6",
-              "frame7",
-              "frame8",
-              "frame9",
-              "frame10",
-              "frame11",
-              "frame12",
-              "frame13"
-          ]
+          "resource" : "bored_animation"
+        },
+        {
+          "rect" :{
+            "x" : 320,
+            "y" : 220,
+            "width" : 170,
+            "height" : 60
+          },
+          "resource" : "bored_animation"
         }
       ],
-      "questionsData" : {
+      "questions" : {
         "question" : "What is my favorite food?",
         "options" : [
           "Bananas",
@@ -55,8 +48,7 @@
     },
     {
       "fileName" : "page6",
-      "hasButton" : true,
-      "questionsData" : {
+      "questions" : {
         "question" : "What is my favorite clothing?",
         "options" : [
           "Underwear",
