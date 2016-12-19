@@ -18,11 +18,14 @@
 		139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 139FDEF41B06529B00C62182 /* libRCTWebSocket.a */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB11A68108700A75B9A /* LaunchScreen.xib */; };
-		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		140ED2AC1D01E1AD002B40FF /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
 		146834051AC3E58100842450 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
+		950D3C4B1E0481B7004A6CCB /* bored_animation in Resources */ = {isa = PBXBuildFile; fileRef = 950D3C491E0481B7004A6CCB /* bored_animation */; };
+		950D3C4C1E0481B7004A6CCB /* spongebob.gif in Resources */ = {isa = PBXBuildFile; fileRef = 950D3C4A1E0481B7004A6CCB /* spongebob.gif */; };
+		952597E21E048AA0003127F5 /* boomemulation.wav in Resources */ = {isa = PBXBuildFile; fileRef = 952597E11E048AA0003127F5 /* boomemulation.wav */; };
+		9528AFFE1E0483ED00D3A9DE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9528AFFD1E0483ED00D3A9DE /* Images.xcassets */; };
 		953BD8B81DF4C450005A0B53 /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 95E1E2AC1DF4C33D0053B0D2 /* libRCTAnimation.a */; };
 		9541E84E1DEDF2EE003D667F /* libRNSound.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 954DCC9B1DEDF22700A8EBA2 /* libRNSound.a */; };
 		955774C61DFF103B0079EC6A /* gunshot.wav in Resources */ = {isa = PBXBuildFile; fileRef = 955774C51DFF103B0079EC6A /* gunshot.wav */; };
@@ -202,7 +205,6 @@
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = LittleFrog/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = LittleFrog/AppDelegate.m; sourceTree = "<group>"; };
 		13B07FB21A68108700A75B9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = LittleFrog/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = LittleFrog/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = LittleFrog/main.m; sourceTree = "<group>"; };
 		146833FF1AC3E56700842450 /* React.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = React.xcodeproj; path = "../node_modules/react-native/React/React.xcodeproj"; sourceTree = "<group>"; };
@@ -210,6 +212,10 @@
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		799B64656C46489EA47DDAAB /* RNSVG.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNSVG.xcodeproj; path = "../node_modules/react-native-svg/ios/RNSVG.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
+		950D3C491E0481B7004A6CCB /* bored_animation */ = {isa = PBXFileReference; lastKnownFileType = file; path = bored_animation; sourceTree = "<group>"; };
+		950D3C4A1E0481B7004A6CCB /* spongebob.gif */ = {isa = PBXFileReference; explicitFileType = image.gif; path = spongebob.gif; sourceTree = "<group>"; };
+		952597E11E048AA0003127F5 /* boomemulation.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = boomemulation.wav; sourceTree = "<group>"; };
+		9528AFFD1E0483ED00D3A9DE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = LittleFrog/Images.xcassets; sourceTree = "<group>"; };
 		954DCC851DEDF22600A8EBA2 /* RNSound.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNSound.xcodeproj; path = "../node_modules/react-native-sound/RNSound.xcodeproj"; sourceTree = "<group>"; };
 		955774C51DFF103B0079EC6A /* gunshot.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = gunshot.wav; sourceTree = "<group>"; };
 		95E1E2A61DF4C33D0053B0D2 /* RCTAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAnimation.xcodeproj; path = "../node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj"; sourceTree = "<group>"; };
@@ -328,10 +334,10 @@
 			isa = PBXGroup;
 			children = (
 				955774C41DFF103B0079EC6A /* res */,
+				9528AFFD1E0483ED00D3A9DE /* Images.xcassets */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
-				13B07FB51A68108700A75B9A /* Images.xcassets */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
 				13B07FB71A68108700A75B9A /* main.m */,
@@ -419,6 +425,9 @@
 			isa = PBXGroup;
 			children = (
 				955774C51DFF103B0079EC6A /* gunshot.wav */,
+				950D3C491E0481B7004A6CCB /* bored_animation */,
+				950D3C4A1E0481B7004A6CCB /* spongebob.gif */,
+				952597E11E048AA0003127F5 /* boomemulation.wav */,
 			);
 			name = res;
 			path = LittleFrog/res;
@@ -730,9 +739,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				950D3C4C1E0481B7004A6CCB /* spongebob.gif in Resources */,
+				9528AFFE1E0483ED00D3A9DE /* Images.xcassets in Resources */,
 				955774C61DFF103B0079EC6A /* gunshot.wav in Resources */,
-				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
+				952597E21E048AA0003127F5 /* boomemulation.wav in Resources */,
+				950D3C4B1E0481B7004A6CCB /* bored_animation in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

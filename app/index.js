@@ -3,11 +3,11 @@
 import React, { Component } from 'react';
 import { Router, Scene, Modal } from 'react-native-router-flux';
 
-import LogoPage from './LogoPage';
-import BookReader from './BookReader/BookReader';
-import BookInfoPage from './BookInfoPage';
-import JoinUsPage from './JoinUsPage';
-import QuizPage from './QuizPage';
+import LogoPage from './scenes/main/LogoPage/LogoPage';
+import BookReader from './scenes/main/BookReader/BookReader';
+import BookInfoPage from './scenes/main/BookInfoPage/BookInfoPage';
+import JoinUsPage from './scenes/modal/JoinUsPage/JoinUsPage';
+import QuizPage from './scenes/modal/QuizPage/QuizPage';
 
 const App = () => {
   return (
@@ -18,7 +18,6 @@ const App = () => {
             component={LogoPage}
             title="Logo"
             animation='fade'
-            initial
           />
           <Scene
             key="bookInfoPage"
@@ -31,6 +30,7 @@ const App = () => {
             component={BookReader}
             title="Book"
             animation='fade'
+            initial
           />
         </Scene>
         <Modal

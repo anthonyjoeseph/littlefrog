@@ -1,0 +1,180 @@
+{
+  "aspectRatio" : 1.64207980652963,
+  "pages" : [
+    {
+      "fileName" : "page1",
+      "animations" : [
+        {
+          "rect" :{
+            "x" : 120,
+            "y" : 120,
+            "width" : 70,
+            "height" : 60
+          },
+          "resource" : "spongebob"
+        },
+        {
+          "rect" :{
+            "x" : 320,
+            "y" : 220,
+            "width" : 170,
+            "height" : 60
+          },
+          "resource" : "bored_animation"
+        }
+      ]
+    },
+    {
+      "fileName" : "page2"
+    },
+    {
+      "fileName" : "page3",
+      "questionIcons" : [
+        {
+          "icon" : {
+            "rect" :{
+              "x" : 0.5,
+              "y" : 0.5,
+              "width" : 0.15,
+              "height" : 0.35
+            },
+            "resource" : "frog_outline"
+          },
+          "questions" : [
+            {
+              "question" : "What is my favorite food?",
+              "options" : [
+                "Bananas",
+                "Razors",
+                "Fried Chicken",
+                "Pencil Shavings"
+              ],
+              "correctIndex" : 2
+            },
+            {
+              "question" : "What is my favorite food?",
+              "options" : [
+                "Bananas",
+                "Razors",
+                "Fried Chicken",
+                "Pencil Shavings"
+              ],
+              "correctIndex" : 2
+            }
+          ]
+        },
+        {
+          "icon" : {
+            "rect" :{
+              "x" : 0.6,
+              "y" : 0.6,
+              "width" : 0.2,
+              "height" : 0.1
+            },
+            "resource" : "frog_outline"
+          },
+          "questions" : [
+            {
+              "question" : "Whddat is my favorite food?",
+              "options" : [
+                "Banddanas",
+                "Razors",
+                "Fridded Chicken",
+                "Pencil Shavings"
+              ],
+              "correctIndex" : 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "fileName" : "page4"
+    },
+    {
+      "fileName" : "page5"
+    },
+    {
+      "fileName" : "page6",
+      "questionIcons" : [
+        {
+          "icon" : {
+            "rect" :{
+              "x" : 240,
+              "y" : 180,
+              "width" : 60,
+              "height" : 60
+            },
+            "resource" : "spongebob"
+          },
+          "questions" : [
+            {
+              "question" : "What is my favorite clothing?",
+              "options" : [
+                "Underwear",
+                "Socks",
+                "Shoes",
+                "T-shirt",
+                "Pencil Shavings"
+              ],
+              "correctIndex" : 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "fileName" : "page7"
+    },
+    {
+      "fileName" : "page8"
+    },
+    {
+      "fileName" : "page9",
+      "questionIcons" : [
+        {
+          "icon" : {
+            "rect" :{
+              "x" : 0.29,
+              "y" : 0.26,
+              "width" : 0.335,
+              "height" : 0.29
+            },
+            "resource" : "frog_outline"
+          },
+          "questions" : [
+            {
+              "question" : "What is my favorite clothing?",
+              "options" : [
+                "Underwear",
+                "Socks",
+                "Shoes",
+                "T-shirt",
+                "Pencil Shavings"
+              ],
+              "correctIndex" : 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "fileName" : "page10"
+    },
+    {
+      "fileName" : "page11"
+    },
+    {
+      "fileName" : "page12"
+    },
+    {
+      "fileName" : "page13"
+    },
+    {
+      "fileName" : "page14"
+    },
+    {
+      "fileName" : "page15"
+    }
+  ]
+}
