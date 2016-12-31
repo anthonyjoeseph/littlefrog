@@ -2,13 +2,11 @@
 
 import React, { Component } from 'react';
 import {
-  StyleSheet,
-  Text,
-  View,
-  Animated
+  StyleSheet
 } from 'react-native';
 
-import SubPanel from './SubPanel'
+import SubPanel from './SubPanel';
+import RadioButtonRow from './RadioButtonRow';
 
 class CharacterPanel extends Component{
   constructor(props){
@@ -33,14 +31,18 @@ class CharacterPanel extends Component{
           style={[
             this.props.style,
             {
-            backgroundColor: 'purple',
-            flexDirection: 'row',
-            justifyContent: 'space-around',
-            alignItems: 'center'
-          }]}>
-          <View>
-            <Text> well I tried </Text>
-          </View>
+              flexDirection: 'row',
+              justifyContent: 'center',
+              alignItems: 'stretch'
+            }]}>
+            <RadioButtonRow
+              options={this.characters}
+              onSelection={
+                function(selection){
+                  this.props.onChangeCharacter(selection);
+                }.bind(this)
+              }
+            />
         </SubPanel>
       );
   }

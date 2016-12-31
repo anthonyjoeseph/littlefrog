@@ -6,24 +6,18 @@ import {
   Text,
   View,
   TextInput,
+  Button,
   TouchableWithoutFeedback
 } from 'react-native';
 
-import Button from 'react-native-button'
 import { RadioButtons } from 'react-native-radio-buttons';
-
-const options = [
-  "Option A",
-  "Option B",
-  "Option C",
-  "Option D"
-];
 
 class QuizMultChoice extends Component {
   constructor(props) {
     super(props)
 
     this.state = {
+      answerDisabled: true,
       selectedOptionIndex: -1
     }
 
@@ -37,7 +31,8 @@ class QuizMultChoice extends Component {
     var selectedOptionIndex = this.props.options.indexOf(selectedOption);
     this.setState({
       selectedOption,
-      selectedOptionIndex: selectedOptionIndex
+      selectedOptionIndex: selectedOptionIndex,
+      answerDisabled: false
     });
   }
 
@@ -77,7 +72,11 @@ class QuizMultChoice extends Component {
           renderContainer={ this.renderContainer }
         />
         <Text style={{color:'rgb(150, 150, 150)'}}>Selected option: {this.state.selectedOption || 'none'}</Text>
-        <Button onPress={this.answer}>ANSWER</Button>
+        <Button
+          onPress={this.answer}
+          disabled={this.state.answerDisabled}
+          color="#841584"
+          title="ANSWER" />
       </View>
     )
   }

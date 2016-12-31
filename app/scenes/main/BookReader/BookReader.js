@@ -29,8 +29,7 @@ class BookReader extends Component {
     this.createStyles();
 
     this.state = {
-      pageNumber: 0,
-      language: "en"
+      pageNumber: 0
     };
 
     this._onChangePage = this._onChangePage.bind(this);
@@ -100,6 +99,11 @@ class BookReader extends Component {
         <CharacterPanel
           ref="characterPanel"
           style={this.styles.characterPanel}
+          onChangeCharacter={
+            function(newCharacter){
+              this.setState({character: newCharacter});
+            }.bind(this)
+          }
         />
         <LanguagePanel
           ref="languagePanel"
@@ -117,6 +121,7 @@ class BookReader extends Component {
         <PlayButton
           style={this.styles.playButton}
           language={this.state.language}
+          character={this.state.character}
         />
         <BookImages
           style={this.styles.bookImages}
@@ -130,6 +135,7 @@ class BookReader extends Component {
   }
 
   _onChangePage(page){
+    console.log(page);
     this.setState({
       pageNumber: page
     });

@@ -2,10 +2,7 @@
 
 import React, { Component } from 'react';
 import {
-  StyleSheet,
   View,
-  Text,
-  Image,
   ScrollView
 } from 'react-native';
 
@@ -19,6 +16,8 @@ class ViewPager extends Component {
   constructor(props){
     super(props);
     this.currentPage = 0;
+    this.hasSentScrollEvent = false;
+    this.hasSentNewPageEvent = true;
 
     var pagesShouldRender = [];
     for(var i = 0; i < props.numPages; i++){
@@ -77,19 +76,26 @@ class ViewPager extends Component {
     var x = event.nativeEvent.contentOffset.x;
     var pageFraction = x / pageWidth;
     if(isNearInt(pageFraction)){
-      var newPage = Math.round(pageFraction);
-      if(this.state.currentPage !== newPage){
-        this.props.onPageScroll(newPage);
-        this.currentPage = newPage;
-        this.updateRenderedPages();
+      if(!this.hasSentNewPageEvent){
+        this.hasSentNewPageEvent = true;
+        this.hasSentScrollEvent = false;
+        var newPage = Math.round(pageFraction);
+        if(this.state.currentPage !== newPage){
+          this.currentPage = newPage;
+          this.updateRenderedPages();
+        }
       }
     }else{
-      if(pageFraction > this.currentPage){
-        if(this.currentPage + 1 < this.props.numPages){
-          this.props.onPageScroll(this.currentPage + 1);
+      if(!this.hasSentScrollEvent){
+        this.hasSentNewPageEvent = false;
+        this.hasSentScrollEvent = true;
+        if(pageFraction > this.currentPage){
+          if(this.currentPage + 1 < this.props.numPages){
+            this.props.onPageScroll(this.currentPage + 1);
+          }
+        }else if(pageFraction > 0){
+          this.props.onPageScroll(this.currentPage - 1);
         }
-      }else if(pageFraction > 0){
-        this.props.onPageScroll(this.currentPage - 1);
       }
     }
   }

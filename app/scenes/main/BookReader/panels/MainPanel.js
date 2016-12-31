@@ -17,10 +17,10 @@ class MainPanel extends Component{
             [
               this.props.style,
               {
-                backgroundColor: 'green',
+                backgroundColor: 'white',
                 flexDirection: 'column',
                 justifyContent: 'space-around',
-                alignItems: 'center'
+                alignItems: 'stretch'
               }
             ]
           }>
@@ -40,6 +40,7 @@ class MainPanel extends Component{
               containerStyle={styles.buttonContainer}
               style={styles.button}
               onPress={this.props.onPressText}>T</Button>
+            <>
           </View>
       );
   }
@@ -47,10 +48,10 @@ class MainPanel extends Component{
 
 const styles = StyleSheet.create({
   buttonContainer:{
-    padding:5, height:45, overflow:'hidden', borderRadius:40, backgroundColor: 'white'
+    flex:1, padding:5, overflow:'hidden', backgroundColor: 'white', flexDirection: 'column', justifyContent: 'center', alignItems: 'center'
   },
   button:{
-    flex:1, textAlign: 'center', backgroundColor: '#FFFFFF', color: 'brown', fontSize:30
+    textAlign: 'center', backgroundColor: '#FFFFFF', color: 'brown', fontSize:30
   }
 });
 

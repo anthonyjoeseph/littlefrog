@@ -28,9 +28,6 @@ class QuizPage extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      question: props.question,
-      options: props.options,
-      correctIndex: props.correctIndex,
       isShowingQuestion: true,
       isAnswerCorrect: false
     };
@@ -42,9 +39,9 @@ class QuizPage extends Component {
     if(this.state.isShowingQuestion){
       return (
         <QuizMultChoice
-          question={this.state.question}
-          options={this.state.options}
-          correctIndex={this.state.correctIndex}
+          question={this.props.question}
+          options={this.props.options}
+          correctIndex={this.props.correctIndex}
           onCorrect={() => { this.setState({isShowingQuestion: false, isAnswerCorrect: true}); } }
           onWrong={() => { this.setState({isShowingQuestion: false, isAnswerCorrect: false}); } }
         />

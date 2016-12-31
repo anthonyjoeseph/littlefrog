@@ -4,7 +4,8 @@ import React, { Component } from 'react';
 import {
   StyleSheet,
   View,
-  Text
+  Text,
+  TouchableWithoutFeedback
 } from 'react-native';
 
 import Sound from 'react-native-sound';
@@ -39,6 +40,7 @@ class PlayButton extends Component{
 
   render(){
       return (
+        <TouchableWithoutFeedback onPress={() => {this.playPause();}}>
           <View style={
             [
               this.props.style,
@@ -50,8 +52,10 @@ class PlayButton extends Component{
               }
             ]
           }>
-            <Text style={{color:'white', fontSize: 40}} onPress={() => {this.playPause();}}>{this.props.language}</Text>
+            <Text style={{color:'white', fontSize: 40}}>{this.props.language}</Text>
+            <Text style={{color:'white', fontSize: 40}}>{this.props.character}</Text>
           </View>
+        </TouchableWithoutFeedback>
       );
   }
 }

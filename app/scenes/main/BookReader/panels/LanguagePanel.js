@@ -8,6 +8,7 @@ import {
   Animated
 } from 'react-native';
 
+import RadioButtonRow from './RadioButtonRow';
 import SubPanel from './SubPanel'
 
 class LanguagePanel extends Component{
@@ -33,30 +34,18 @@ class LanguagePanel extends Component{
           style={[
             this.props.style,
             {
-            width: 400,
-            backgroundColor: 'purple',
-            flexDirection: 'row',
-            justifyContent: 'space-around',
-            alignItems: 'center'
-          }]}>
-          {
-            this.languages.map(
-              function(language){
-                return (
-                  <Text
-                    key={language}
-                    style={{
-                      backgroundColor: '#FFFFFF',
-                      color: 'red',
-                      fontSize:40
-                    }}
-                    onPress={() => {this.props.onChangeLanguage(language)}}>
-                  {language}
-                  </Text>
-                );
-              }.bind(this)
-            )
-          }
+              flexDirection: 'row',
+              justifyContent: 'center',
+              alignItems: 'stretch'
+            }]}>
+            <RadioButtonRow
+              options={this.languages}
+              onSelection={
+                function(selection){
+                  this.props.onChangeLanguage(selection);
+                }.bind(this)
+              }
+            />
         </SubPanel>
       );
   }
