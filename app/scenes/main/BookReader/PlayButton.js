@@ -41,19 +41,18 @@ class PlayButton extends Component{
   render(){
       return (
         <TouchableWithoutFeedback onPress={() => {this.playPause();}}>
-          <View style={
-            [
-              this.props.style,
-              {
-                backgroundColor: 'orange',
-                flexDirection: 'column',
-                justifyContent: 'space-around',
-                alignItems: 'center'
-              }
-            ]
-          }>
-            <Text style={{color:'white', fontSize: 40}}>{this.props.language}</Text>
-            <Text style={{color:'white', fontSize: 40}}>{this.props.character}</Text>
+          <View style={this.props.style}>
+            <View
+              style={{
+                  flex:1,
+                  backgroundColor: 'orange',
+                  flexDirection: 'column',
+                  justifyContent: 'space-around',
+                  alignItems: 'center'
+              }}>
+              <Text style={{color:'white', fontSize: 40}}>{this.props.language}</Text>
+              <Text style={{color:'white', fontSize: 40}}>{this.props.character}</Text>
+            </View>
           </View>
         </TouchableWithoutFeedback>
       );

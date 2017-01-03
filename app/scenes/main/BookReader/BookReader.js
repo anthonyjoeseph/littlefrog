@@ -15,9 +15,6 @@ import Button from 'react-native-button';
 
 import BookImages from './viewpager/BookImages'
 import MainPanel from './panels/MainPanel'
-import LanguagePanel from './panels/LanguagePanel'
-import CharacterPanel from './panels/CharacterPanel'
-import BookText from './panels/BookText'
 import PlayButton from './PlayButton'
 
 
@@ -26,10 +23,11 @@ class BookReader extends Component {
     super(props)
 
     this.loadData();
-    this.createStyles();
 
     this.state = {
-      pageNumber: 0
+      pageNumber: 0,
+      character: "ame",
+      language: "mex"
     };
 
     this._onChangePage = this._onChangePage.bind(this);
@@ -50,81 +48,33 @@ class BookReader extends Component {
     this.picWidth = height * this.picAspectRatio;
   }
 
-  createStyles(){
-    this.styles = StyleSheet.create({
-      interactionPanel:{
-        zIndex: 2,
-        flex: 1
-      },
-      characterPanel:{
-        bottom: (this.dimensions.height * (3/5) - (100/2)),
-        position: 'absolute',
-        zIndex: 1,
-        height: 100
-      },
-      languagePanel:{
-        bottom: (this.dimensions.height * (2/5) - (100/2)),
-        position: 'absolute',
-        zIndex: 1,
-        height: 100
-      },
-      bookText:{
-        position:'absolute',
-        zIndex: 1,
-        bottom: 0,
-        height: 100,
-        width: this.picWidth
-      },
-      playButton:{
-        position: 'absolute',
-        zIndex: 1,
-        top: 0,
-        right: 50
-      },
-      bookImages:{
-        zIndex: 0
-      }
-    });
-  }
-
   render() {
     return (
       <View style={{flex:1, flexDirection:'row'}}>
         <MainPanel
-          style={this.styles.interactionPanel}
+          style={styles.interactionPanel}
+          panelSpan={this.dimensions.height}
+          panelDepth={this.dimensions.width - this.picWidth}
+          textStretch={this.picWidth}
+          pageNumber={this.state.pageNumber}
           onPressHome={() => {Actions.bookInfoPage()}}
-          onPressCharacter={() => this.refs.characterPanel.slide()}
-          onPressLanguage={() => {this.refs.languagePanel.slide()}}
-          onPressText={() => {this.refs.slidingText.slide()}}/>
-        <CharacterPanel
-          ref="characterPanel"
-          style={this.styles.characterPanel}
           onChangeCharacter={
+            function(newLanguage){
+              this.setState({language: newLanguage});
+            }.bind(this)
+          }
+          onChangeLanguage={
             function(newCharacter){
               this.setState({character: newCharacter});
             }.bind(this)
           }
         />
-        <LanguagePanel
-          ref="languagePanel"
-          style={this.styles.languagePanel}
-          onChangeLanguage={
-            function(newLanguage){
-              this.setState({language: newLanguage});
-            }.bind(this)
-          }
-        />
-        <BookText
-          ref="slidingText"
-          style={this.styles.bookText}
-          pageNumber={this.state.pageNumber} />
-        <PlayButton
-          style={this.styles.playButton}
+        <PlayButton style={styles.test}
           language={this.state.language}
           character={this.state.character}
         />
         <BookImages
-          style={this.styles.bookImages}
+          style={styles.bookImages}
           onPageScroll={this._onChangePage}
           pagesData={this.pagesData}
           onQuizSelect={this._onQuizSelect}
@@ -151,5 +101,28 @@ class BookReader extends Component {
     );
   }
 }
+
+const styles = StyleSheet.create({
+  interactionPanel:{
+    zIndex: 2,
+    flex: 1
+  },
+  playButton:{
+    position: 'absolute',
+    zIndex: 2,
+    top: 0,
+    right: 50
+  },
+  test:{
+    position: 'absolute',
+    zIndex:2,
+    top: 0,
+    right: 50,
+    backgroundColor: 'green'
+  },
+  bookImages:{
+    zIndex: 0
+  }
+});
 
 export default BookReader;
