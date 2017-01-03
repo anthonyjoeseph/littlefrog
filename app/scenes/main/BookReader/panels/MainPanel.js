@@ -17,13 +17,19 @@ class MainPanel extends Component{
   constructor(props){
     super(props);
 
-    this.state = {ownWidth: 0};
-
     this.createStyles();
   }
 
   createStyles(){
     this.styles = StyleSheet.create({
+      panelContainer:{
+          flex: 1,
+          zIndex: 2,
+          flexDirection: 'column',
+          justifyContent: 'space-around',
+          alignItems: 'stretch',
+          backgroundColor: 'white'
+      },
       buttonContainer:{
         zIndex: 2,
         flex:1,
@@ -40,34 +46,9 @@ class MainPanel extends Component{
         backgroundColor: '#FFFFFF',
         color: 'brown',
         fontSize:30
-      },
-      characterPanel:{
-        bottom: (this.props.panelSpan * (3/5) - (100/2)),
-        position: 'absolute',
-        zIndex: 1,
-        width: 400,
-        left: this.props.panelDepth,
-        height: 100
-      },
-      languagePanel:{
-        bottom: (this.props.panelSpan * (2/5) - (100/2)),
-        position: 'absolute',
-        zIndex: 1,
-        width: 400,
-        left: this.props.panelDepth,
-        height: 100
-      },
-      bookText:{
-        position:'absolute',
-        zIndex: 1,
-        bottom: 0,
-        height: 100,
-        left: this.props.panelDepth,
-        width: this.props.textStretch
       }
     });
   }
-
   render(){
       return (
           <View style={
@@ -75,49 +56,33 @@ class MainPanel extends Component{
               this.props.style
             ]
           }>
-            <View style={{
-                flex: 1,
-                zIndex: 2,
-                flexDirection: 'column',
-                justifyContent: 'space-around',
-                alignItems: 'stretch',
-                backgroundColor: 'white'
-            }}>
+            <View style={this.styles.panelContainer}>
               <Button
                 containerStyle={this.styles.buttonContainer}
                 style={this.styles.button}
-                onPress={this.props.onPressHome}>H</Button>
+                onPress={
+                  () => {this.props.onPressHome()}
+                }>H</Button>
               <Button
                 containerStyle={this.styles.buttonContainer}
                 style={this.styles.button}
-                onPress={() => this.refs.characterPanel.slide()
+                onPress={
+                  () => {this.props.onPressCharacter()}
                 }>C</Button>
               <Button
                 containerStyle={this.styles.buttonContainer}
                 style={this.styles.button}
-                onPress={() => {this.refs.languagePanel.slide()}}>L</Button>
+                onPress={
+                  () => {
+                    this.props.onPressLanguage()
+                  }}>L</Button>
               <Button
                 containerStyle={this.styles.buttonContainer}
                 style={this.styles.button}
-                onPress={() => {this.refs.slidingText.slide()}}>T</Button>
+                onPress={
+                  () => {this.props.onPressBookText()
+                  }}>T</Button>
             </View>
-
-            <CharacterPanel
-              ref="characterPanel"
-              style={this.styles.characterPanel}
-              onChangeCharacter={(character) => {
-                this.props.onChangeCharacter(character)}}
-            />
-            <LanguagePanel
-              ref="languagePanel"
-              style={this.styles.languagePanel}
-              onChangeLanguage={(language) => {
-                this.props.onChangeLanguage(language)}}
-            />
-            <BookText
-              ref="slidingText"
-              style={this.styles.bookText}
-              pageNumber={this.props.pageNumber} />
           </View>
       );
   }
