@@ -1,0 +1,10 @@
+drop table SCHOOLS;
+drop table TEACHERS;
+drop table CLASSES;
+drop table READING_CHARACTERS;
+drop table STUDENTS;
+drop table BOOKS;
+drop table READING_LISTS;
+drop table QUIZZES;
+drop table QUIZ_QUESTIONS;
+drop table QUIZ_STUDENT_RESPONSES;

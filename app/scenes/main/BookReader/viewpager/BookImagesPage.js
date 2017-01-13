@@ -9,8 +9,6 @@ import {
   Platform
 } from 'react-native';
 
-import SvgUri from 'react-native-svg-uri';
-
 import TouchableOutline from './TouchableOutline'
 
 class BookImagesPage extends Component{

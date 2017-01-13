@@ -1,0 +1,117 @@
+create table SCHOOLS (
+  SCHOOL_ID int not null,
+  NAME varchar(500) not null,
+  ZIP_CODE int not null,
+  
+  PRIMARY KEY (SCHOOL_ID)
+);
+
+create table TEACHERS (
+  TEACHER_ID int not null AUTO_INCREMENT,
+  
+  NAME varchar(100) not null,
+  
+  PRIMARY KEY (TEACHER_ID)
+);
+
+create table CLASSES (
+  CLASS_ID int not null AUTO_INCREMENT,
+  
+  NAME varchar(100) not null,
+  TEACHER_ID int not null,
+  SCHOOL_ID int not null,
+  YEAR int not null,
+  
+  PRIMARY KEY (CLASS_ID),
+  FOREIGN KEY (TEACHER_ID) REFERENCES TEACHERS(TEACHER_ID),
+  FOREIGN KEY (SCHOOL_ID) REFERENCES SCHOOLS(SCHOOL_ID)
+);
+
+create table READING_CHARACTERS (
+  READING_CHARACTER_ID int not null AUTO_INCREMENT,
+  
+  NAME varchar(100) not null,
+  
+  PRIMARY KEY (READING_CHARACTER_ID)
+);
+
+create table STUDENTS (
+  STUDENT_ID int not null AUTO_INCREMENT,
+  
+  EMAIL varchar(50) not null,
+  PASSWORD varchar(50) not null,
+  
+  FIRST_NAME varchar(50) not null,
+  LAST_NAME varchar(50) not null,
+  IS_FEMALE BOOLEAN not null,
+  BIRTHDAY DATE not null,
+  
+  READING_CHARACTER_ID int not null,
+  CLASS_ID int not null,
+  
+  PRIMARY KEY (STUDENT_ID),
+  FOREIGN KEY (READING_CHARACTER_ID) REFERENCES READING_CHARACTERS(READING_CHARACTER_ID),
+  FOREIGN KEY (CLASS_ID) REFERENCES CLASSES(CLASS_ID)
+);
+
+create table BOOKS (
+  BOOK_ID int not null AUTO_INCREMENT,
+  
+  TITLE varchar(100) not null,
+  
+  PRIMARY KEY (BOOK_ID)
+);
+
+create table READING_LISTS (
+  CLASS_ID int not null,
+  BOOK_ID int not null,
+  
+  FOREIGN KEY (CLASS_ID) REFERENCES CLASSES(CLASS_ID),
+  FOREIGN KEY (BOOK_ID) REFERENCES BOOKS(BOOK_ID)
+);
+
+create table QUIZZES (
+  QUIZ_ID int not null AUTO_INCREMENT,
+  
+  TITLE varchar(100) not null,
+  BOOK_ID int not null,
+  
+  PRIMARY KEY (QUIZ_ID),
+  FOREIGN KEY (BOOK_ID) REFERENCES BOOKS(BOOK_ID) 
+);
+
+create table QUIZ_QUESTIONS (
+  QUIZ_QUESTION_ID int not null AUTO_INCREMENT,
+  
+  QUIZ_ID int not null,
+  QUESTION_NUMBER int not null,
+  QUESTION varchar(500) not null,
+  CORRECT_RESPONSE varchar(500) not null,
+  
+  UNIQUE (QUIZ_ID, QUESTION_NUMBER),
+  PRIMARY KEY (QUIZ_QUESTION_ID),
+  FOREIGN KEY (QUIZ_ID) REFERENCES QUIZZES(QUIZ_ID)
+);
+
+create table QUIZ_ALTERNATE_RESPONSES (
+  QUIZ_MULTIPLE_CHOICE_RESPONSE_ID int not null AUTO_INCREMENT,
+  
+  QUIZ_QUESTION_ID int not null,
+  ALTERNATE_RESPONSE varchar(100) not null,
+  
+  PRIMARY KEY (QUIZ_MULTIPLE_CHOICE_RESPONSE_ID),
+  FOREIGN KEY (QUIZ_QUESTION_ID) REFERENCES QUIZ_QUESTIONS(QUIZ_QUESTION_ID)
+);
+
+create table QUIZ_STUDENT_RESPONSES (
+  QUIZ_STUDENT_RESPONSE_ID int not null AUTO_INCREMENT,
+  
+  STUDENT_ID int not null,
+  QUIZ_QUESTION_ID int not null,
+  STUDENT_RESPONSE varchar(500) not null,
+  
+  UNIQUE (STUDENT_ID, QUIZ_QUESTION_ID),
+  PRIMARY KEY (QUIZ_STUDENT_RESPONSE_ID),
+  FOREIGN KEY (STUDENT_ID) REFERENCES STUDENTS(STUDENT_ID),
+  FOREIGN KEY (QUIZ_QUESTION_ID) REFERENCES QUIZ_QUESTIONS(QUIZ_QUESTION_ID)
+);
