@@ -1,4 +1,4 @@
-// app/BookReader/BookPageImage.js
+// app/scenes/main/BookReader/ViewPager/TouchableOutline.js
 
 import React, { Component } from 'react';
 import {

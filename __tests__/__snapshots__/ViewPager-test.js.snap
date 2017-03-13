@@ -1,0 +1,89 @@
+exports[`test renders correctly 1`] = `
+<ScrollView
+  horizontal={true}
+  onScroll={[Function]}
+  pagingEnabled={true}
+  scrollEventThrottle={1}>
+  <View
+    shouldRender={true}>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail">
+      Testing 1
+    </Text>
+  </View>
+  <View
+    shouldRender={true}>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail">
+      Testing 2
+    </Text>
+  </View>
+  <View
+    shouldRender={true}>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail">
+      Testing 3
+    </Text>
+  </View>
+  <View
+    shouldRender={true}>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail">
+      Testing 4
+    </Text>
+  </View>
+  <View
+    shouldRender={false}>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail">
+      Testing 5
+    </Text>
+  </View>
+  <View
+    shouldRender={false}>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail">
+      Testing 6
+    </Text>
+  </View>
+  <View
+    shouldRender={false}>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail">
+      Testing 7
+    </Text>
+  </View>
+  <View
+    shouldRender={false}>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail">
+      Testing 8
+    </Text>
+  </View>
+  <View
+    shouldRender={false}>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail">
+      Testing 9
+    </Text>
+  </View>
+</ScrollView>
+`;

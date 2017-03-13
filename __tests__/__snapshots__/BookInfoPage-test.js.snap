@@ -1,0 +1,195 @@
+exports[`test renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "stretch",
+      "backgroundColor": "#1586BA",
+      "flex": 1,
+      "flexDirection": "column",
+      "height": 100,
+      "justifyContent": "center",
+      "padding": 20,
+    }
+  }>
+  <View
+    style={
+      Object {
+        "flex": 0.5,
+        "justifyContent": "flex-end",
+      }
+    }>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "color": "#FFFFFF",
+          "fontSize": 40,
+          "textAlign": "center",
+        }
+      }>
+      Little Frog Doesn\'t Listen
+    </Text>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "color": "#FFFFFF",
+          "fontSize": 20,
+          "textAlign": "center",
+        }
+      }>
+      Origin: Korea
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "alignItems": "stretch",
+        "flex": 0.5,
+        "flexDirection": "column",
+        "justifyContent": "flex-start",
+      }
+    }>
+    <View
+      style={
+        Object {
+          "alignItems": "stretch",
+          "flexDirection": "row",
+          "justifyContent": "center",
+        }
+      }>
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "flexDirection": "row",
+            "justifyContent": "flex-end",
+          }
+        }>
+        <Image
+          source={
+            Object {
+              "uri": "spongebob",
+            }
+          }
+          style={
+            Object {
+              "height": 100,
+              "width": 100,
+            }
+          } />
+      </View>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": "white",
+            "flex": 1,
+          }
+        }>
+        This is a traditional story from Korea. Millstone is a rock that grinds the grains into powder. Discover what a magical millstone can do and learn why the ocean is so salty! Remember to flip the page whenever you hear the chime.
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "flex-end",
+          "flex": 1,
+          "flexDirection": "row",
+          "justifyContent": "flex-end",
+        }
+      }>
+      <View
+        accessibilityComponentType="button"
+        accessibilityLabel={undefined}
+        accessibilityTraits="button"
+        accessible={true}
+        hitSlop={undefined}
+        onLayout={undefined}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "opacity": 1,
+          }
+        }
+        testID={undefined}>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "#007aff",
+                "fontFamily": "HelveticaNeue-Medium",
+                "fontSize": 17,
+                "fontWeight": "bold",
+                "textAlign": "center",
+              },
+              null,
+              Object {
+                "color": "yellow",
+              },
+              null,
+            ]
+          }>
+          Start Reading
+        </Text>
+      </View>
+      <View
+        accessibilityComponentType="button"
+        accessibilityLabel={undefined}
+        accessibilityTraits="button"
+        accessible={true}
+        hitSlop={undefined}
+        onLayout={undefined}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "opacity": 1,
+          }
+        }
+        testID={undefined}>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "#007aff",
+                "fontFamily": "HelveticaNeue-Medium",
+                "fontSize": 17,
+                "fontWeight": "bold",
+                "textAlign": "center",
+              },
+              null,
+              Object {
+                "color": "green",
+              },
+              null,
+            ]
+          }>
+          Read to Me
+        </Text>
+      </View>
+    </View>
+  </View>
+</View>
+`;

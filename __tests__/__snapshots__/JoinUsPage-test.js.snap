@@ -1,0 +1,184 @@
+exports[`test renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "stretch",
+      "backgroundColor": "rgba(0, 0, 0, 0.7)",
+      "flexDirection": "row",
+      "height": 1334,
+      "justifyContent": "center",
+      "left": 0,
+      "opacity": 0,
+      "position": "absolute",
+      "top": 0,
+      "width": 750,
+    }
+  }>
+  <View
+    accessibilityComponentType={undefined}
+    accessibilityLabel={undefined}
+    accessibilityTraits={undefined}
+    accessible={true}
+    hitSlop={undefined}
+    onLayout={undefined}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Array [
+        Object {
+          "backgroundColor": "transparent",
+        },
+        Object {
+          "alignItems": "stretch",
+          "flex": 1,
+          "flexDirection": "row",
+          "justifyContent": "center",
+        },
+      ]
+    }
+    testID={undefined}>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flex": 1,
+          "flexDirection": "row",
+          "justifyContent": "center",
+        }
+      }>
+      <View
+        accessibilityComponentType={undefined}
+        accessibilityLabel={undefined}
+        accessibilityTraits={undefined}
+        accessible={true}
+        hitSlop={undefined}
+        onLayout={undefined}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "alignItems": "stretch",
+            "flexDirection": "column",
+            "height": 200,
+            "justifyContent": "center",
+            "width": 300,
+          }
+        }
+        testID={undefined}>
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#1586BA",
+              "flex": 2,
+              "flexDirection": "column",
+              "justifyContent": "center",
+            }
+          }>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "white",
+                "fontSize": 30,
+              }
+            }>
+            Join for Promotions!
+          </Text>
+        </View>
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "white",
+              "flex": 3,
+              "flexDirection": "column",
+              "justifyContent": "center",
+            }
+          }>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "black",
+                "fontSize": 20,
+              }
+            }>
+            Enter your email
+          </Text>
+          <TextInput
+            editable={true}
+            style={
+              Object {
+                "height": 40,
+              }
+            } />
+          <View
+            accessibilityComponentType="button"
+            accessibilityLabel={undefined}
+            accessibilityTraits="button"
+            accessible={true}
+            hitSlop={undefined}
+            onLayout={undefined}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "backgroundColor": "white",
+                "borderRadius": 40,
+                "height": 45,
+                "opacity": 1,
+                "overflow": "hidden",
+                "padding": 5,
+              }
+            }
+            testID={undefined}>
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Array [
+                  Object {
+                    "color": "#007aff",
+                    "fontFamily": "HelveticaNeue-Medium",
+                    "fontSize": 17,
+                    "fontWeight": "bold",
+                    "textAlign": "center",
+                  },
+                  null,
+                  Object {
+                    "backgroundColor": "#000000",
+                    "color": "white",
+                    "flex": 3,
+                    "fontSize": 20,
+                    "textAlign": "center",
+                  },
+                  null,
+                ]
+              }>
+              SUBMIT
+            </Text>
+          </View>
+        </View>
+      </View>
+    </View>
+  </View>
+</View>
+`;

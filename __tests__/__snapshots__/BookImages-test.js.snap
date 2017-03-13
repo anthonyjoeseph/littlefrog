@@ -1,0 +1,284 @@
+exports[`test renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "height": 200,
+      "width": 400,
+    }
+  }>
+  <ScrollView
+    horizontal={true}
+    onScroll={[Function]}
+    pagingEnabled={true}
+    scrollEventThrottle={1}>
+    <View
+      style={
+        Object {
+          "alignItems": "stretch",
+          "flexDirection": "row",
+          "height": 200,
+          "justifyContent": "flex-start",
+          "width": 400,
+        }
+      }>
+      <Image
+        resizeMode="contain"
+        source={
+          Object {
+            "uri": "page1",
+          }
+        }
+        style={
+          Object {
+            "alignItems": "center",
+            "flex": 1,
+            "justifyContent": "center",
+            "width": null,
+          }
+        }>
+        <Image
+          source={
+            Object {
+              "uri": "spongebob.gif",
+            }
+          }
+          style={
+            Object {
+              "bottom": 120,
+              "height": 60,
+              "left": 120,
+              "position": "absolute",
+              "width": 70,
+            }
+          } />
+        <Image
+          source={
+            Object {
+              "uri": "bored_animation.gif",
+            }
+          }
+          style={
+            Object {
+              "bottom": 220,
+              "height": 60,
+              "left": 320,
+              "position": "absolute",
+              "width": 170,
+            }
+          } />
+      </Image>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "stretch",
+          "flexDirection": "row",
+          "height": 200,
+          "justifyContent": "flex-start",
+          "width": 400,
+        }
+      }>
+      <Image
+        resizeMode="contain"
+        source={
+          Object {
+            "uri": "page2",
+          }
+        }
+        style={
+          Object {
+            "alignItems": "center",
+            "flex": 1,
+            "justifyContent": "center",
+            "width": null,
+          }
+        } />
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "stretch",
+          "flexDirection": "row",
+          "height": 200,
+          "justifyContent": "flex-start",
+          "width": 400,
+        }
+      }>
+      <Image
+        resizeMode="contain"
+        source={
+          Object {
+            "uri": "page3",
+          }
+        }
+        style={
+          Object {
+            "alignItems": "center",
+            "flex": 1,
+            "justifyContent": "center",
+            "width": null,
+          }
+        }>
+        <View
+          style={
+            Object {
+              "bottom": 100,
+              "height": 70,
+              "left": 200,
+              "position": "absolute",
+              "width": 60,
+            }
+          }>
+          <Image
+            accessibilityComponentType={undefined}
+            accessibilityLabel={undefined}
+            accessibilityTraits={undefined}
+            accessible={true}
+            hitSlop={undefined}
+            onLayout={undefined}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            resizeMode="stretch"
+            source={
+              Object {
+                "uri": "frog_outline",
+              }
+            }
+            style={
+              Object {
+                "height": 70,
+                "tintColor": null,
+                "width": 60,
+              }
+            }
+            testID={undefined} />
+        </View>
+        <View
+          style={
+            Object {
+              "bottom": 120,
+              "height": 20,
+              "left": 240,
+              "position": "absolute",
+              "width": 80,
+            }
+          }>
+          <Image
+            accessibilityComponentType={undefined}
+            accessibilityLabel={undefined}
+            accessibilityTraits={undefined}
+            accessible={true}
+            hitSlop={undefined}
+            onLayout={undefined}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            resizeMode="stretch"
+            source={
+              Object {
+                "uri": "frog_outline",
+              }
+            }
+            style={
+              Object {
+                "height": 20,
+                "tintColor": null,
+                "width": 80,
+              }
+            }
+            testID={undefined} />
+        </View>
+      </Image>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "stretch",
+          "flexDirection": "row",
+          "height": 200,
+          "justifyContent": "flex-start",
+          "width": 400,
+        }
+      }>
+      <Image
+        resizeMode="contain"
+        source={
+          Object {
+            "uri": "page4",
+          }
+        }
+        style={
+          Object {
+            "alignItems": "center",
+            "flex": 1,
+            "justifyContent": "center",
+            "width": null,
+          }
+        } />
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "stretch",
+          "flexDirection": "row",
+          "height": 200,
+          "justifyContent": "flex-start",
+          "width": 400,
+        }
+      }>
+      <Image
+        resizeMode="contain"
+        source={
+          Object {
+            "uri": "page5",
+          }
+        }
+        style={
+          Object {
+            "alignItems": "center",
+            "flex": 1,
+            "justifyContent": "center",
+            "width": null,
+          }
+        } />
+    </View>
+    <View
+      height={200}
+      width={400} />
+    <View
+      height={200}
+      width={400} />
+    <View
+      height={200}
+      width={400} />
+    <View
+      height={200}
+      width={400} />
+    <View
+      height={200}
+      width={400} />
+    <View
+      height={200}
+      width={400} />
+    <View
+      height={200}
+      width={400} />
+    <View
+      height={200}
+      width={400} />
+    <View
+      height={200}
+      width={400} />
+    <View
+      height={200}
+      width={400} />
+  </ScrollView>
+</View>
+`;

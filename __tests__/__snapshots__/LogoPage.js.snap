@@ -1,0 +1,188 @@
+exports[`test renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "stretch",
+      "backgroundColor": "#1586BA",
+      "flex": 1,
+      "flexDirection": "column",
+      "height": 100,
+      "justifyContent": "center",
+      "padding": 20,
+    }
+  }>
+  <View
+    style={
+      Object {
+        "flex": 0.5,
+        "justifyContent": "flex-end",
+      }
+    }>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "color": "#FFFFFF",
+          "fontSize": 40,
+          "textAlign": "center",
+        }
+      }>
+      broccoli
+    </Text>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "color": "#FFFFFF",
+          "fontSize": 20,
+          "textAlign": "center",
+        }
+      }>
+      Little Frog Doesn\'t Listen
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flex": 0.5,
+        "flexDirection": "column",
+        "justifyContent": "flex-end",
+      }
+    }>
+    <View
+      style={
+        Object {
+          "alignItems": "stretch",
+          "flexDirection": "row",
+          "justifyContent": "center",
+        }
+      }>
+      <View
+        style={
+          Object {
+            "flex": 2,
+          }
+        } />
+      <View
+        accessibilityComponentType="button"
+        accessibilityLabel={undefined}
+        accessibilityTraits="button"
+        accessible={true}
+        hitSlop={undefined}
+        onLayout={undefined}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "backgroundColor": "white",
+            "borderRadius": 40,
+            "height": 45,
+            "opacity": 1,
+            "overflow": "hidden",
+            "padding": 5,
+          }
+        }
+        testID={undefined}>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "#007aff",
+                "fontFamily": "HelveticaNeue-Medium",
+                "fontSize": 17,
+                "fontWeight": "bold",
+                "textAlign": "center",
+              },
+              null,
+              Object {
+                "backgroundColor": "#FFFFFF",
+                "color": "red",
+                "flex": 3,
+                "fontSize": 40,
+                "textAlign": "center",
+              },
+              null,
+            ]
+          }>
+          Join us!
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "flex": 1,
+          }
+        } />
+      <View
+        accessibilityComponentType="button"
+        accessibilityLabel={undefined}
+        accessibilityTraits="button"
+        accessible={true}
+        hitSlop={undefined}
+        onLayout={undefined}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "backgroundColor": "white",
+            "borderRadius": 40,
+            "height": 45,
+            "opacity": 1,
+            "overflow": "hidden",
+            "padding": 5,
+          }
+        }
+        testID={undefined}>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "#007aff",
+                "fontFamily": "HelveticaNeue-Medium",
+                "fontSize": 17,
+                "fontWeight": "bold",
+                "textAlign": "center",
+              },
+              null,
+              Object {
+                "backgroundColor": "#FFFFFF",
+                "color": "red",
+                "flex": 3,
+                "fontSize": 40,
+                "textAlign": "center",
+              },
+              null,
+            ]
+          }>
+          Proceed
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "flex": 2,
+          }
+        } />
+    </View>
+  </View>
+</View>
+`;

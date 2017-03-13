@@ -28,6 +28,7 @@
 		953C14CD1E296A4100C71255 /* bored_animation in Resources */ = {isa = PBXBuildFile; fileRef = 953C14C91E296A4100C71255 /* bored_animation */; };
 		953C14CE1E296A4100C71255 /* gunshot.wav in Resources */ = {isa = PBXBuildFile; fileRef = 953C14CA1E296A4100C71255 /* gunshot.wav */; };
 		953C14CF1E296A4100C71255 /* spongebob.gif in Resources */ = {isa = PBXBuildFile; fileRef = 953C14CB1E296A4100C71255 /* spongebob.gif */; };
+		95466C681E71E5840047C5A1 /* libRCTOrientation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 95466C671E71E53C0047C5A1 /* libRCTOrientation.a */; };
 		9557D5201E29438E008551CB /* libRNSound.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 95F94F871E29430C00690DBD /* libRNSound.a */; };
 /* End PBXBuildFile section */
 
@@ -214,6 +215,13 @@
 			remoteGlobalIDString = 58B5119B1A9E6C1200147676;
 			remoteInfo = RCTText;
 		};
+		95466C661E71E53C0047C5A1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 95466C621E71E53C0047C5A1 /* RCTOrientation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 134814201AA4EA6300B7C361;
+			remoteInfo = RCTOrientation;
+		};
 		95F94F861E29430C00690DBD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 95F94F691E29430C00690DBD /* RNSound.xcodeproj */;
@@ -250,6 +258,8 @@
 		953C14C91E296A4100C71255 /* bored_animation */ = {isa = PBXFileReference; lastKnownFileType = file; path = bored_animation; sourceTree = "<group>"; };
 		953C14CA1E296A4100C71255 /* gunshot.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = gunshot.wav; sourceTree = "<group>"; };
 		953C14CB1E296A4100C71255 /* spongebob.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = spongebob.gif; sourceTree = "<group>"; };
+		95466C621E71E53C0047C5A1 /* RCTOrientation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTOrientation.xcodeproj; path = "../node_modules/react-native-orientation/iOS/RCTOrientation.xcodeproj"; sourceTree = "<group>"; };
+		95466C6A1E71ED940047C5A1 /* Orientation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Orientation.h; path = "../node_modules/react-native-orientation/iOS/RCTOrientation/Orientation.h"; sourceTree = "<group>"; };
 		95F94F691E29430C00690DBD /* RNSound.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNSound.xcodeproj; path = "../node_modules/react-native-sound/RNSound.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -278,6 +288,7 @@
 				832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */,
 				00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */,
 				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
+				95466C681E71E5840047C5A1 /* libRCTOrientation.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -372,6 +383,7 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
 				13B07FB71A68108700A75B9A /* main.m */,
+				832341AE1AAA6A7D00B99B32 /* Libraries */,
 			);
 			name = LittleFrog;
 			sourceTree = "<group>";
@@ -412,6 +424,7 @@
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				95466C621E71E53C0047C5A1 /* RCTOrientation.xcodeproj */,
 				95F94F691E29430C00690DBD /* RNSound.xcodeproj */,
 				5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */,
 				146833FF1AC3E56700842450 /* React.xcodeproj */,
@@ -441,9 +454,9 @@
 			isa = PBXGroup;
 			children = (
 				13B07FAE1A68108700A75B9A /* LittleFrog */,
-				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* LittleFrogTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
+				95466C691E71ED930047C5A1 /* Frameworks */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -468,6 +481,22 @@
 			);
 			name = res;
 			path = LittleFrog/res;
+			sourceTree = "<group>";
+		};
+		95466C631E71E53C0047C5A1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				95466C671E71E53C0047C5A1 /* libRCTOrientation.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		95466C691E71ED930047C5A1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				95466C6A1E71ED940047C5A1 /* Orientation.h */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		95F94F6A1E29430C00690DBD /* Products */ = {
@@ -523,7 +552,7 @@
 		83CBB9F71A601CBA00E9B192 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0610;
+				LastUpgradeCheck = 610;
 				ORGANIZATIONNAME = Facebook;
 				TargetAttributes = {
 					00E356ED1AD99517003FC87E = {
@@ -567,6 +596,10 @@
 				{
 					ProductGroup = 00C302D41ABCB9D200DB3ED1 /* Products */;
 					ProjectRef = 00C302D31ABCB9D200DB3ED1 /* RCTNetwork.xcodeproj */;
+				},
+				{
+					ProductGroup = 95466C631E71E53C0047C5A1 /* Products */;
+					ProjectRef = 95466C621E71E53C0047C5A1 /* RCTOrientation.xcodeproj */;
 				},
 				{
 					ProductGroup = 139105B71AF99BAD00B5F7CC /* Products */;
@@ -777,6 +810,13 @@
 			remoteRef = 832341B41AAA6A8300B99B32 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		95466C671E71E53C0047C5A1 /* libRCTOrientation.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRCTOrientation.a;
+			remoteRef = 95466C661E71E53C0047C5A1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		95F94F871E29430C00690DBD /* libRNSound.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -878,6 +918,10 @@
 				INFOPLIST_FILE = LittleFrogTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LittleFrog.app/LittleFrog";
 			};
@@ -891,6 +935,10 @@
 				INFOPLIST_FILE = LittleFrogTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LittleFrog.app/LittleFrog";
 			};
@@ -902,6 +950,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/../node_modules/react-native-orientation/iOS/RCTOrientation/**";
 				INFOPLIST_FILE = LittleFrog/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -919,6 +968,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/../node_modules/react-native-orientation/iOS/RCTOrientation/**";
 				INFOPLIST_FILE = LittleFrog/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -934,7 +984,7 @@
 		83CBBA201A601CBA00E9B192 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -975,7 +1025,7 @@
 		83CBBA211A601CBA00E9B192 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;

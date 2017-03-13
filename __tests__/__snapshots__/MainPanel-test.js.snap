@@ -1,0 +1,241 @@
+exports[`test renders correctly 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "transparent",
+        "width": 50,
+        "zIndex": 2,
+      },
+    ]
+  }>
+  <View
+    style={
+      Object {
+        "alignItems": "stretch",
+        "backgroundColor": "white",
+        "flex": 1,
+        "flexDirection": "column",
+        "justifyContent": "space-around",
+        "zIndex": 2,
+      }
+    }>
+    <View
+      accessibilityComponentType="button"
+      accessibilityLabel={undefined}
+      accessibilityTraits="button"
+      accessible={true}
+      hitSlop={undefined}
+      onLayout={undefined}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "white",
+          "flex": 1,
+          "flexDirection": "column",
+          "justifyContent": "center",
+          "opacity": 1,
+          "overflow": "hidden",
+          "padding": 5,
+          "zIndex": 2,
+        }
+      }
+      testID={undefined}>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Array [
+            Object {
+              "color": "#007aff",
+              "fontFamily": "HelveticaNeue-Medium",
+              "fontSize": 17,
+              "fontWeight": "bold",
+              "textAlign": "center",
+            },
+            null,
+            Object {
+              "backgroundColor": "#FFFFFF",
+              "color": "brown",
+              "fontSize": 30,
+              "textAlign": "center",
+              "zIndex": 2,
+            },
+            null,
+          ]
+        }>
+        H
+      </Text>
+    </View>
+    <View
+      accessibilityComponentType="button"
+      accessibilityLabel={undefined}
+      accessibilityTraits="button"
+      accessible={true}
+      hitSlop={undefined}
+      onLayout={undefined}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "white",
+          "flex": 1,
+          "flexDirection": "column",
+          "justifyContent": "center",
+          "opacity": 1,
+          "overflow": "hidden",
+          "padding": 5,
+          "zIndex": 2,
+        }
+      }
+      testID={undefined}>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Array [
+            Object {
+              "color": "#007aff",
+              "fontFamily": "HelveticaNeue-Medium",
+              "fontSize": 17,
+              "fontWeight": "bold",
+              "textAlign": "center",
+            },
+            null,
+            Object {
+              "backgroundColor": "#FFFFFF",
+              "color": "brown",
+              "fontSize": 30,
+              "textAlign": "center",
+              "zIndex": 2,
+            },
+            null,
+          ]
+        }>
+        C
+      </Text>
+    </View>
+    <View
+      accessibilityComponentType="button"
+      accessibilityLabel={undefined}
+      accessibilityTraits="button"
+      accessible={true}
+      hitSlop={undefined}
+      onLayout={undefined}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "white",
+          "flex": 1,
+          "flexDirection": "column",
+          "justifyContent": "center",
+          "opacity": 1,
+          "overflow": "hidden",
+          "padding": 5,
+          "zIndex": 2,
+        }
+      }
+      testID={undefined}>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Array [
+            Object {
+              "color": "#007aff",
+              "fontFamily": "HelveticaNeue-Medium",
+              "fontSize": 17,
+              "fontWeight": "bold",
+              "textAlign": "center",
+            },
+            null,
+            Object {
+              "backgroundColor": "#FFFFFF",
+              "color": "brown",
+              "fontSize": 30,
+              "textAlign": "center",
+              "zIndex": 2,
+            },
+            null,
+          ]
+        }>
+        L
+      </Text>
+    </View>
+    <View
+      accessibilityComponentType="button"
+      accessibilityLabel={undefined}
+      accessibilityTraits="button"
+      accessible={true}
+      hitSlop={undefined}
+      onLayout={undefined}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "white",
+          "flex": 1,
+          "flexDirection": "column",
+          "justifyContent": "center",
+          "opacity": 1,
+          "overflow": "hidden",
+          "padding": 5,
+          "zIndex": 2,
+        }
+      }
+      testID={undefined}>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Array [
+            Object {
+              "color": "#007aff",
+              "fontFamily": "HelveticaNeue-Medium",
+              "fontSize": 17,
+              "fontWeight": "bold",
+              "textAlign": "center",
+            },
+            null,
+            Object {
+              "backgroundColor": "#FFFFFF",
+              "color": "brown",
+              "fontSize": 30,
+              "textAlign": "center",
+              "zIndex": 2,
+            },
+            null,
+          ]
+        }>
+        T
+      </Text>
+    </View>
+  </View>
+</View>
+`;

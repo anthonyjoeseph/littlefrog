@@ -24,7 +24,7 @@ class BookReader extends Component {
 
     var {width, height} = Dimensions.get('window');
     this.dimensions = {
-      width: width,
+      width: width + 30,
       height: height
     }
     var bookData = require('./resources/BookData.json');
@@ -114,11 +114,6 @@ class BookReader extends Component {
       }
     );
   }
-  /*
-    characterPanelVisible={this.state.characterPanelVisible}
-    languagePanelVisible={this.state.languagePanelVisible}
-    bookTextPanelVisible={this.state.bookTextPanelVisible}
-  */
 }
 
 const styles = StyleSheet.create({

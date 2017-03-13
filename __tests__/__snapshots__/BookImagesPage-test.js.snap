@@ -1,0 +1,5 @@
+exports[`test renders correctly 1`] = `
+<View
+  height={500}
+  width={500} />
+`;

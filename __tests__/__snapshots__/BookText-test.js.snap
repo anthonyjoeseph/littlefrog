@@ -1,0 +1,37 @@
+exports[`test renders correctly 1`] = `
+<View
+  onLayout={[Function]}
+  style={
+    Object {
+      "backgroundColor": "#1586BA",
+      "bottom": 0,
+      "height": 100,
+      "left": 0,
+      "position": "absolute",
+      "transform": Array [
+        Object {
+          "translateX": -1000,
+        },
+      ],
+      "width": 500,
+      "zIndex": 1,
+    }
+  }>
+  <ScrollView>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "color": "white",
+        }
+      }>
+      Once upon a time, next to a pond, there was a village of frogs.
+      “Ribbit, ribbit! Ribbit, ribbit!”
+      The cries of the frogs made it a very noisy village!
+      
+    </Text>
+  </ScrollView>
+</View>
+`;

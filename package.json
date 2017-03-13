@@ -1,15 +1,15 @@
 {
-	"name": "LittleFrog",
-	"version": "0.0.1",
-	"private": true,
-	"scripts": {
-		"start": "node node_modules/react-native/local-cli/cli.js start",
-		"test": "jest",
+  "name": "LittleFrog",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "test": "jest",
     "flow": "flow; test $? -eq 0 -o $? -eq 2"
-	},
-	"dependencies": {
-		"react": "15.4.2",
-		"react-native": "0.40.0",
+  },
+  "dependencies": {
+    "react": "15.4.2",
+    "react-native": "0.42.0",
     "react-native-button": "^1.7.1",
     "react-native-flexi-radio-button": "^0.1.5",
     "react-native-i18n": "^0.1.1",
@@ -18,16 +18,24 @@
     "react-native-radio-buttons": "^0.13.0",
     "react-native-router-flux": "^3.37.0",
     "react-native-sound": "^0.8.3"
-	},
-	"jest": {
-		"preset": "react-native"
-	},
-	"devDependencies": {
-		"babel-jest": "18.0.0",
-		"babel-preset-react-native": "1.9.1",
-    "flow-bin": "^0.35.0",
-		"jest": "18.1.0",
-		"react-test-renderer": "15.4.2",
+  },
+  "jest": {
+    "preset": "react-native",
+    "testRegex": "./__tests__/[^setup].*.js$",
+    "mocksPattern": "./__tests__/mocks/.*.js$",
+    "transformIgnorePatterns": [
+      "node_modules/(?!react-native|native-base|react-clone-referenced-element)"
+    ],
+    "setupFiles": [
+      "./__tests__/setup.js"
+    ]
+  },
+  "devDependencies": {
+    "babel-jest": "18.0.0",
+    "babel-preset-react-native": "1.9.1",
+    "flow-bin": "^0.41.0",
+    "jest": "18.1.0",
+    "react-test-renderer": "15.4.2",
     "whatwg-fetch": "2.0.1"
-	}
+  }
 }

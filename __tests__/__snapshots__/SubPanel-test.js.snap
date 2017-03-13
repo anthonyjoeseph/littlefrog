@@ -1,0 +1,25 @@
+exports[`test renders correctly 1`] = `
+<View
+  onLayout={[Function]}
+  style={
+    Object {
+      "alignItems": "stretch",
+      "flexDirection": "row",
+      "justifyContent": "center",
+      "transform": Array [
+        Object {
+          "translateX": -1000,
+        },
+      ],
+    }
+  }>
+  <View>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail">
+      Testing 123
+    </Text>
+  </View>
+</View>
+`;

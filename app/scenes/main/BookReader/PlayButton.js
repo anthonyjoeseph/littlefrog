@@ -10,7 +10,7 @@ import {
 
 import Sound from 'react-native-sound';
 
-class PlayButton extends Component{
+class PlayButton extends Component {
 
   constructor(props){
     super(props);
