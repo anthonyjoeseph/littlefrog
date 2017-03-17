@@ -9,25 +9,24 @@ import {
   View,
   Image,
   TextInput,
-  Props
+  Props,
+  AsyncStorage
 } from 'react-native';
-
-import 'whatwg-fetch';
-
 import Button from 'react-native-button'
-
 import { Actions } from 'react-native-router-flux';
-
 import Orientation from 'react-native-orientation';
+import {fetchAndPersistJWT, authenticatedRESTRequest} from '../../../RESTAccess.js';
+import * as Progress from 'react-native-progress';
 
 class LogInForm extends Component {
   constructor(props:Props){
     super(props);
     this.state={
       emailString: "",
-      passwordString: ""
+      passwordString: "",
+      networkStatus: ""
     }
-    this.logIn = this.logIn.bind(this);
+    this.logInAsync = this.logInAsync.bind(this);
   }
   componentDidMount(){
     Orientation.addOrientationListener(this.orientationDidChange);
@@ -35,31 +34,19 @@ class LogInForm extends Component {
   componentWillUnmount(){
     Orientation.removeOrientationListener(this.orientationDidChange);
   }
-  logIn(){
+  async logInAsync(){
     var email = this.state.emailString;
     var password = this.state.passwordString;
-    var bodyJSON = JSON.stringify({
-      name: email,
-      password: password
-    });
 
-    fetch('http://readbroccoli.com:8080/broccolistudents/users/verify', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: bodyJSON
-    })
-    .then(function(response){
-      return response.json();
-    })
-    .then(function(json){
-      var isGood = json.user_exists;
-    })
-    .catch(function(ex){
-      var isbad = ex;
-    });
+    this.setState({networkStatus:"waiting"});
+    try{
+      await fetchAndPersistJWT(email, password);
+      this.rotateAndSwitchScenes();
+    }catch(e){
+      this.setState({networkStatus:e.message});
+    }
   }
+
   rotateAndSwitchScenes(){
     Orientation.lockToLandscapeLeft();
     //don't route to book scene until the device is already rotated
@@ -67,10 +54,28 @@ class LogInForm extends Component {
   orientationDidChange(orientation:string){
     //the device has rotated, now route to book scene
     if(orientation === 'LANDSCAPE'){
-      Actions.bookReader();
+      Actions.homePage();
     }
   }
   render(){
+    var networkStatusElement;
+    switch(this.state.networkStatus){
+      case "":
+        networkStatusElement = <Text></Text>;
+        break;
+      case "waiting":
+        networkStatusElement = <Progress.Circle
+                                size={30}
+                                thickness={5}
+                                direction='clockwise'
+                                indeterminate={true}
+                                animated={true}
+                                color='red'/>;
+        break;
+      default:
+        networkStatusElement = <Text>{this.state.networkStatus}</Text>;
+        break;
+    }
     return (
       <View style={{flex:1}}>
         <View style={{flex:3, justifyContent:'flex-end'}}>
@@ -97,12 +102,14 @@ class LogInForm extends Component {
           />
         </View>
         <View style={{flex:1}}/>
-        <View style={{flex:3, justifyContent:'flex-start'}}>
+        <View style={{flex:3, justifyContent:'flex-start', alignItems:'center'}}>
           <Button
             containerStyle={{padding:5, height:45, overflow:'hidden', borderRadius:40, backgroundColor: 'white'}}
             style={{textAlign: 'center', backgroundColor: '#FFFFFF', color: 'rgb(57, 166, 198)', fontSize:30}}
-            onPress={this.logIn}
+            onPress={this.logInAsync}
           >Sign In</Button>
+          <View style={{flex:1}}/>
+          {networkStatusElement}
         </View>
       </View>
     );

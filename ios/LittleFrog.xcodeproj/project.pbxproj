@@ -24,6 +24,7 @@
 		146834051AC3E58100842450 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
 		5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
+		95274D2F1E7853970035181F /* libART.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 956315761E7850AB00DE8DD1 /* libART.a */; };
 		953C14CC1E296A4100C71255 /* boomemulation.wav in Resources */ = {isa = PBXBuildFile; fileRef = 953C14C81E296A4100C71255 /* boomemulation.wav */; };
 		953C14CD1E296A4100C71255 /* bored_animation in Resources */ = {isa = PBXBuildFile; fileRef = 953C14C91E296A4100C71255 /* bored_animation */; };
 		953C14CE1E296A4100C71255 /* gunshot.wav in Resources */ = {isa = PBXBuildFile; fileRef = 953C14CA1E296A4100C71255 /* gunshot.wav */; };
@@ -222,6 +223,13 @@
 			remoteGlobalIDString = 134814201AA4EA6300B7C361;
 			remoteInfo = RCTOrientation;
 		};
+		956315751E7850AB00DE8DD1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 956315711E7850AB00DE8DD1 /* ART.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0CF68AC11AF0540F00FF9E5C;
+			remoteInfo = ART;
+		};
 		95F94F861E29430C00690DBD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 95F94F691E29430C00690DBD /* RNSound.xcodeproj */;
@@ -260,6 +268,7 @@
 		953C14CB1E296A4100C71255 /* spongebob.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = spongebob.gif; sourceTree = "<group>"; };
 		95466C621E71E53C0047C5A1 /* RCTOrientation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTOrientation.xcodeproj; path = "../node_modules/react-native-orientation/iOS/RCTOrientation.xcodeproj"; sourceTree = "<group>"; };
 		95466C6A1E71ED940047C5A1 /* Orientation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Orientation.h; path = "../node_modules/react-native-orientation/iOS/RCTOrientation/Orientation.h"; sourceTree = "<group>"; };
+		956315711E7850AB00DE8DD1 /* ART.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ART.xcodeproj; path = "../node_modules/react-native/Libraries/ART/ART.xcodeproj"; sourceTree = "<group>"; };
 		95F94F691E29430C00690DBD /* RNSound.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNSound.xcodeproj; path = "../node_modules/react-native-sound/RNSound.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -276,6 +285,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95274D2F1E7853970035181F /* libART.a in Frameworks */,
 				9557D5201E29438E008551CB /* libRNSound.a in Frameworks */,
 				5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */,
 				146834051AC3E58100842450 /* libReact.a in Frameworks */,
@@ -424,6 +434,7 @@
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				956315711E7850AB00DE8DD1 /* ART.xcodeproj */,
 				95466C621E71E53C0047C5A1 /* RCTOrientation.xcodeproj */,
 				95F94F691E29430C00690DBD /* RNSound.xcodeproj */,
 				5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */,
@@ -497,6 +508,14 @@
 				95466C6A1E71ED940047C5A1 /* Orientation.h */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		956315721E7850AB00DE8DD1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				956315761E7850AB00DE8DD1 /* libART.a */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		95F94F6A1E29430C00690DBD /* Products */ = {
@@ -573,6 +592,10 @@
 			productRefGroup = 83CBBA001A601CBA00E9B192 /* Products */;
 			projectDirPath = "";
 			projectReferences = (
+				{
+					ProductGroup = 956315721E7850AB00DE8DD1 /* Products */;
+					ProjectRef = 956315711E7850AB00DE8DD1 /* ART.xcodeproj */;
+				},
 				{
 					ProductGroup = 00C302A81ABCB8CE00DB3ED1 /* Products */;
 					ProjectRef = 00C302A71ABCB8CE00DB3ED1 /* RCTActionSheet.xcodeproj */;
@@ -815,6 +838,13 @@
 			fileType = archive.ar;
 			path = libRCTOrientation.a;
 			remoteRef = 95466C661E71E53C0047C5A1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		956315761E7850AB00DE8DD1 /* libART.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libART.a;
+			remoteRef = 956315751E7850AB00DE8DD1 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		95F94F871E29430C00690DBD /* libRNSound.a */ = {

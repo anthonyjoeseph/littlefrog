@@ -16,27 +16,43 @@ import { Actions } from 'react-native-router-flux';
 
 import Button from 'react-native-button';
 
-class SignUpPage extends Component {
-  continue(){
-    Actions.paymentPage();
+import Orientation from 'react-native-orientation';
+
+class PaymentPage extends Component {
+  componentDidMount(){
+    Orientation.addOrientationListener(this.orientationDidChange);
+  }
+  componentWillUnmount(){
+    Orientation.removeOrientationListener(this.orientationDidChange);
+  }
+  rotateAndSwitchScenes(){
+    Orientation.lockToLandscapeLeft();
+    //don't route to book scene until the device is already rotated
+  }
+  orientationDidChange(orientation:string){
+    //the device has rotated, now route to book scene
+    if(orientation === 'LANDSCAPE'){
+      Actions.homePage();
+    }
   }
   render(){
     return (
       <View style={styles.container}>
         <View style={{flex:1}}/>
+        <Text>Broccoli subscription 1 week free trial</Text>
         <View style={styles.box}>
           <TextInput
             autoCapitalize='none'
             multiline={false}
             style={{height: 40, color:'rgb(57, 166, 198)', borderBottomColor: 'grey', borderBottomWidth: 8}}
-            placeholder="first name"
+            placeholder="Card Type"
             placeholderTextColor='rgb(57, 166, 198)'
           />
           <TextInput
             autoCapitalize='none'
             multiline={false}
             style={{height: 40, color:'rgb(57, 166, 198)', borderBottomColor: 'grey', borderBottomWidth: 8}}
-            placeholder="last name"
+            placeholder="Name On Card"
             placeholderTextColor='rgb(57, 166, 198)'
           />
         </View>
@@ -46,39 +62,29 @@ class SignUpPage extends Component {
             autoCapitalize='none'
             multiline={false}
             style={{height: 40, color:'rgb(57, 166, 198)', borderBottomColor: 'grey', borderBottomWidth: 8}}
-            placeholder="boy/girl"
+            placeholder="Card Number"
             placeholderTextColor='rgb(57, 166, 198)'
           />
           <TextInput
             autoCapitalize='none'
             multiline={false}
             style={{height: 40, color:'rgb(57, 166, 198)', borderBottomColor: 'grey', borderBottomWidth: 8}}
-            placeholder="date of birth"
+            placeholder="Month, Year, CRV Code"
             placeholderTextColor='rgb(57, 166, 198)'
           />
         </View>
-        <View style={{flex:1}}/>
-        <View style={styles.box}>
-          <TextInput
-            autoCapitalize='none'
-            multiline={false}
-            style={{height: 40, color:'rgb(57, 166, 198)', borderBottomColor: 'grey', borderBottomWidth: 8}}
-            placeholder="school code"
-            placeholderTextColor='rgb(57, 166, 198)'
-          />
-          <TextInput
-            autoCapitalize='none'
-            multiline={false}
-            style={{height: 40, color:'rgb(57, 166, 198)', borderBottomColor: 'grey', borderBottomWidth: 8}}
-            placeholder="zip code"
-            placeholderTextColor='rgb(57, 166, 198)'
-          />
-        </View>
+        <Text>
+          Above method will automatically be used
+          for subscription payment after the free
+          trial period.{'\n\n'}
+          Subscription can be cancelled at any
+          time!
+        </Text>
         <View style={{flex:5, flexDirection:'column', justifyContent:'center', alignItems:'center', width:300}}>
           <Button
             containerStyle={{padding:5, height:45, overflow:'hidden', borderRadius:40, backgroundColor: 'white'}}
             style={{textAlign: 'center', backgroundColor: '#FFFFFF', color: 'rgb(57, 166, 198)', fontSize:30}}
-            onPress={this.continue}
+            onPress={this.rotateAndSwitchScenes}
           >Continue</Button>
         </View>
       </View>
@@ -102,4 +108,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default SignUpPage;
+export default PaymentPage;
