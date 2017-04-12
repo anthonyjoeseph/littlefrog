@@ -1,3 +1,4 @@
+// @flow
 // app/BookReader/BookText.js
 
 import React, { Component } from 'react';
@@ -5,17 +6,38 @@ import {
   StyleSheet,
   Text,
   ScrollView,
-  Animated
+  Animated,
+  Props,
+  State
 } from 'react-native';
 
 import SubPanel from './SubPanel'
 
 class BookText extends Component{
-  constructor(props){
+  state:State
+  constructor(props:Props){
     super(props);
-    //load text
-    var textForPagesData = require('../resources/BookTextEng.json');
-    this.textForPages = textForPagesData.text;
+    this.state = {
+      textForPages: {0:"retrieving book text..."}
+    };
+  }
+
+  componentWillReceiveProps(props:Props){
+    if(props.authHeaders.hasOwnProperty('Authorization')){
+      fetch(props.baseURI + "text/BookTextEng.json", {
+        method: "GET",
+        headers: props.authHeaders
+      })
+      .then(function(rawBookTextData){
+        return rawBookTextData.json();
+      })
+      .then(function(bookTextData){
+        this.setState({textForPages:bookTextData.text});
+      }.bind(this))
+      .catch(function(error){
+        this.setState({textForPages:{0: "error retrieving book text"}});
+      }.bind(this));
+    }
   }
 
   componentDidMount(){
@@ -38,7 +60,7 @@ class BookText extends Component{
             ]
           } >
           <ScrollView>
-            <Text style={{color:'white'}}>{this.textForPages[this.props.pageNumber]}</Text>
+            <Text style={{color:'white'}}>{this.state.textForPages[this.props.pageNumber]}</Text>
           </ScrollView>
         </SubPanel>
       );

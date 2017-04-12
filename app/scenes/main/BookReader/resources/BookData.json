@@ -1,8 +1,9 @@
 {
   "aspectRatio" : 1.64207980652963,
+  "baseURI" : "http://readbroccoli.com:3000/littleFrog/",
   "pages" : [
     {
-      "fileName" : "page1",
+      "imageURI" : "page1.jpg",
       "animations" : [
         {
           "rect" :{
@@ -25,10 +26,10 @@
       ]
     },
     {
-      "fileName" : "page2"
+      "imageURI" : "page2.jpg"
     },
     {
-      "fileName" : "page3",
+      "imageURI" : "page3.jpg",
       "questionIcons" : [
         {
           "icon" : {
@@ -89,13 +90,13 @@
       ]
     },
     {
-      "fileName" : "page4"
+      "imageURI" : "page4.jpg"
     },
     {
-      "fileName" : "page5"
+      "imageURI" : "page5.jpg"
     },
     {
-      "fileName" : "page6",
+      "imageURI" : "page6.jpg",
       "questionIcons" : [
         {
           "icon" : {
@@ -124,13 +125,13 @@
       ]
     },
     {
-      "fileName" : "page7"
+      "imageURI" : "page7.jpg"
     },
     {
-      "fileName" : "page8"
+      "imageURI" : "page8.jpg"
     },
     {
-      "fileName" : "page9",
+      "imageURI" : "page9.jpg",
       "questionIcons" : [
         {
           "icon" : {
@@ -159,22 +160,22 @@
       ]
     },
     {
-      "fileName" : "page10"
+      "imageURI" : "page10.jpg"
     },
     {
-      "fileName" : "page11"
+      "imageURI" : "page11.jpg"
     },
     {
-      "fileName" : "page12"
+      "imageURI" : "page12.jpg"
     },
     {
-      "fileName" : "page13"
+      "imageURI" : "page13.jpg"
     },
     {
-      "fileName" : "page14"
+      "imageURI" : "page14.jpg"
     },
     {
-      "fileName" : "page15"
+      "imageURI" : "page15.jpg"
     }
   ]
 }

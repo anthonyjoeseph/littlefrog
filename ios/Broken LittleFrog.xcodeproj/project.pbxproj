@@ -5,7 +5,6 @@
 	};
 	objectVersion = 46;
 	objects = {
-
 /* Begin PBXBuildFile section */
 		00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302AC1ABCB8CE00DB3ED1 /* libRCTActionSheet.a */; };
 		00C302E71ABCBA2D00DB3ED1 /* libRCTGeolocation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302BA1ABCB90400DB3ED1 /* libRCTGeolocation.a */; };
@@ -31,6 +30,10 @@
 		953C14CF1E296A4100C71255 /* spongebob.gif in Resources */ = {isa = PBXBuildFile; fileRef = 953C14CB1E296A4100C71255 /* spongebob.gif */; };
 		95466C681E71E5840047C5A1 /* libRCTOrientation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 95466C671E71E53C0047C5A1 /* libRCTOrientation.a */; };
 		9557D5201E29438E008551CB /* libRNSound.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 95F94F871E29430C00690DBD /* libRNSound.a */; };
+		CC6F0255166C4B0B9148BD04 /* libRNFetchBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B42BB342BC44873A913AE79 /* libRNFetchBlob.a */; };
+		16EA2494EBA54B66A9A962F8 /* libRNI18n.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 560522D028364F7DA9BF2344 /* libRNI18n.a */; };
+		ADDD114A9399449A81B64665 /* libRCTOrientation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D7CF156BBEDB4331B576BA5F /* libRCTOrientation.a */; };
+		930ECC677FD3492FAED626A1 /* libRNSound.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5F238BB2DD64212871C8BD2 /* libRNSound.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -270,6 +273,15 @@
 		95466C6A1E71ED940047C5A1 /* Orientation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Orientation.h; path = "../node_modules/react-native-orientation/iOS/RCTOrientation/Orientation.h"; sourceTree = "<group>"; };
 		956315711E7850AB00DE8DD1 /* ART.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ART.xcodeproj; path = "../node_modules/react-native/Libraries/ART/ART.xcodeproj"; sourceTree = "<group>"; };
 		95F94F691E29430C00690DBD /* RNSound.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNSound.xcodeproj; path = "../node_modules/react-native-sound/RNSound.xcodeproj"; sourceTree = "<group>"; };
+		4C747CCB6F364EA39A086B59 /* RNFetchBlob.xcodeproj */ = {isa = PBXFileReference; name = "RNFetchBlob.xcodeproj"; path = "../node_modules/react-native-fetch-blob/ios/RNFetchBlob.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		2B42BB342BC44873A913AE79 /* libRNFetchBlob.a */ = {isa = PBXFileReference; name = "libRNFetchBlob.a"; path = "libRNFetchBlob.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		29DF159E42574D19AE66C55F /* RNI18n.xcodeproj */ = {isa = PBXFileReference; name = "RNI18n.xcodeproj"; path = "../node_modules/react-native-i18n/RNI18n.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		560522D028364F7DA9BF2344 /* libRNI18n.a */ = {isa = PBXFileReference; name = "libRNI18n.a"; path = "libRNI18n.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		00AE9E641EFF4C978DA3F965 /* RCTOrientation.xcodeproj */ = {isa = PBXFileReference; name = "RCTOrientation.xcodeproj"; path = "../node_modules/react-native-orientation/iOS/RCTOrientation.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		D7CF156BBEDB4331B576BA5F /* libRCTOrientation.a */ = {isa = PBXFileReference; name = "libRCTOrientation.a"; path = "libRCTOrientation.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		33CF44ACA6ED4045A0E08C79 /* RNSound.xcodeproj */ = {isa = PBXFileReference; name = "RNSound.xcodeproj"; path = "../node_modules/react-native-sound/RNSound.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		A5F238BB2DD64212871C8BD2 /* libRNSound.a */ = {isa = PBXFileReference; name = "libRNSound.a"; path = "libRNSound.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		A97C4A512ED54E86BD205411 /* RNFetchBlob.xcodeproj */ = {isa = PBXFileReference; name = "RNFetchBlob.xcodeproj"; path = "../node_modules/react-native-fetch-blob/ios/RNFetchBlob.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -299,6 +311,10 @@
 				00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */,
 				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
 				95466C681E71E5840047C5A1 /* libRCTOrientation.a in Frameworks */,
+				CC6F0255166C4B0B9148BD04 /* libRNFetchBlob.a in Frameworks */,
+				16EA2494EBA54B66A9A962F8 /* libRNI18n.a in Frameworks */,
+				ADDD114A9399449A81B64665 /* libRCTOrientation.a in Frameworks */,
+				930ECC677FD3492FAED626A1 /* libRNSound.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -448,6 +464,7 @@
 				832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */,
 				00C302DF1ABCB9EE00DB3ED1 /* RCTVibration.xcodeproj */,
 				139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */,
+				4C747CCB6F364EA39A086B59 /* RNFetchBlob.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -468,6 +485,7 @@
 				00E356EF1AD99517003FC87E /* LittleFrogTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				95466C691E71ED930047C5A1 /* Frameworks */,
+				44B640EDE3E54DB28A7B8FE8 /* Libraries */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -524,6 +542,18 @@
 				95F94F871E29430C00690DBD /* libRNSound.a */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		44B640EDE3E54DB28A7B8FE8 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				29DF159E42574D19AE66C55F /* RNI18n.xcodeproj */,
+				00AE9E641EFF4C978DA3F965 /* RCTOrientation.xcodeproj */,
+				33CF44ACA6ED4045A0E08C79 /* RNSound.xcodeproj */,
+				A97C4A512ED54E86BD205411 /* RNFetchBlob.xcodeproj */,
+			);
+			name = Libraries;
+			path = "";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -951,6 +981,10 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LittleFrog.app/LittleFrog";
@@ -968,6 +1002,10 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LittleFrog.app/LittleFrog";
@@ -980,7 +1018,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
-				HEADER_SEARCH_PATHS = "$(SRCROOT)/../node_modules/react-native-orientation/iOS/RCTOrientation/**";
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/../node_modules/react-native-orientation/iOS/RCTOrientation/**""$(SRCROOT)/../node_modules/react-native-fetch-blob/ios/**";
 				INFOPLIST_FILE = LittleFrog/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -998,7 +1036,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
-				HEADER_SEARCH_PATHS = "$(SRCROOT)/../node_modules/react-native-orientation/iOS/RCTOrientation/**";
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/../node_modules/react-native-orientation/iOS/RCTOrientation/**""$(SRCROOT)/../node_modules/react-native-fetch-blob/ios/**";
 				INFOPLIST_FILE = LittleFrog/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (

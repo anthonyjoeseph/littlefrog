@@ -1,4 +1,4 @@
 import { AppRegistry } from 'react-native';
-import App from './app'
+import LittleFrogApp from './index'
 
-AppRegistry.registerComponent('LittleFrog', () => App);
+AppRegistry.registerComponent('LittleFrog', () => LittleFrogApp);

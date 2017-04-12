@@ -8,7 +8,8 @@ import {
   Text,
   View,
   Image,
-  Props
+  Props,
+  State
 } from 'react-native';
 
 import Orientation from 'react-native-orientation';
@@ -17,6 +18,7 @@ import LandingForm from './LandingForm';
 import LogInForm from './LogInForm';
 
 class LogInPage extends Component {
+  state:State
   constructor(props:Props){
     super(props);
     this.state = {

@@ -77,6 +77,8 @@ class BookControl extends Component{
             ]
           }>
             <BookImages
+              authHeaders={this.props.authHeaders}
+              baseURI={this.props.baseURI}
               style={this.styles.bookImages}
               onPageScroll={this.props.onChangePage}
               pagesData={this.props.pagesData}
@@ -97,6 +99,8 @@ class BookControl extends Component{
             />
             <BookText
               ref="slidingText"
+              authHeaders={this.props.authHeaders}
+              baseURI={this.props.baseURI}
               style={this.styles.bookText}
               pageNumber={this.props.pageNumber} />
           </View>

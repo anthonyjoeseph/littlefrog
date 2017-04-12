@@ -13,7 +13,7 @@ import {
 import { Actions } from 'react-native-router-flux';
 import Button from 'react-native-button'
 
-import DismissableFullscreenPopup from '../DismissableFullscreenPopup'
+import DismissableFullscreenPopup from '../../modal/DismissableFullscreenPopup';
 
 class UserPanel extends Component {
   render(){
@@ -22,7 +22,7 @@ class UserPanel extends Component {
         onDismiss={this.props.onDismiss}>
         <View style={styles.container}>
           <Image
-            source={require('./background.png')}
+            source={require('./panel-background.png')}
             style={{flex:1, width:null, justifyContent:'center', alignItems:'flex-end'}}
             resizeMode='stretch'>
             <Button

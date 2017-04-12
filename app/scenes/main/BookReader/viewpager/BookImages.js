@@ -1,3 +1,4 @@
+// @flow
 // app/BookReader/BookImages.js
 
 import React, { Component } from 'react';
@@ -31,8 +32,11 @@ class BookImages extends Component {
                 function(data, index){
                   return (
                     <BookImagesPage
-                     key={data.fileName}
-                     source={{uri: data.fileName}}
+                     key={index}
+                     source={{
+                       uri: this.props.baseURI + "pages/" + index + ".jpg",
+                       headers: this.props.authHeaders
+                     }}
                      animations={data.animations}
                      questionIcons={data.questionIcons}
                      onQuizSelect={

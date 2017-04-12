@@ -4,6 +4,23 @@ import { AsyncStorage } from 'react-native';
 
 var STORAGE_KEY = "JWT_ASYNC_STORAGE_KEY";
 
+export async function hasJWT(){
+  try{
+    var DEMO_TOKEN = await AsyncStorage.getItem(STORAGE_KEY);
+  } catch (e) {
+    return false;
+  }
+  var tmp = "three";
+  return DEMO_TOKEN != null && DEMO_TOKEN != "";
+}
+
+export async function getAuthorizationHeaders(){
+    var DEMO_TOKEN = await AsyncStorage.getItem(STORAGE_KEY);
+    return {
+        'Authorization': 'Bearer ' + DEMO_TOKEN
+      };
+}
+
 export async function fetchAndPersistJWT(username:String, password:String){
   var bodyJSON = JSON.stringify({
     name: username,
@@ -29,17 +46,15 @@ export async function fetchAndPersistJWT(username:String, password:String){
 }
 
 export async function clearJWT(){
-  await AsyncStorage.setItem(STORAGE_KEY, "");
+  await AsyncStorage.removeItem(STORAGE_KEY);
 }
 
-export async function authenticatedRESTRequest(restURI:String, restMethod:String, restBody:String) {
-  var DEMO_TOKEN = await AsyncStorage.getItem(STORAGE_KEY);
+export async function authenticatedRESTRequest(restURI:string, restMethod:string, restBody:string) {
+  var authHeaders = await getAuthorizationHeaders();
   var fullURI = "http://readbroccoli.com:8080/broccolistudents/" + restURI;
   var response = await fetch(fullURI, {
     method: restMethod,
-    headers: {
-      'Authorization': 'Bearer ' + DEMO_TOKEN
-    },
+    headers: authHeaders,
     body: restBody
   });
   return response;

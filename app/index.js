@@ -15,9 +15,8 @@ import StatsPage from './scenes/main/StatsPage/StatsPage';
 import BookReader from './scenes/main/BookReader/BookReader';
 import JoinUsPage from './scenes/modal/JoinUsPage/JoinUsPage';
 import QuizPage from './scenes/modal/QuizPage/QuizPage';
-import UserPanel from './scenes/modal/UserPanel/UserPanel';
 
-const App = () => {
+const LittleFrogApp = () => {
   return (
     <Router>
       <Scene key="Modal" component={Modal}>
@@ -27,7 +26,6 @@ const App = () => {
             component={LogInPage}
             title="LogIn"
             animation='fade'
-            initial
           />
           <Scene
             key="signUpPage"
@@ -46,6 +44,7 @@ const App = () => {
             component={HomePage}
             title="Home"
             animation='fade'
+            initial
           />
           <Scene
             key="bookReader"
@@ -76,9 +75,6 @@ const App = () => {
           key="joinUsPage"
           component={JoinUsPage}/>
         <Modal
-          key="userPanel"
-          component={UserPanel}/>
-        <Modal
           key="quizPage"
           component={QuizPage}/>
       </Scene>
@@ -86,4 +82,4 @@ const App = () => {
   );
 }
 
-export default App;
+export default LittleFrogApp;

@@ -1,6 +1,9 @@
 package com.littlefrog;
 
 import com.facebook.react.ReactActivity;
+import com.zmxv.RNSound.RNSoundPackage;
+import com.i18n.reactnativei18n.ReactNativeI18n;
+import com.RNFetchBlob.RNFetchBlobPackage;
 import android.content.Intent; // <--- import
 import android.content.res.Configuration; // <--- import
 

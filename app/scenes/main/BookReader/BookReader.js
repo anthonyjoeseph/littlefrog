@@ -1,3 +1,4 @@
+// @flow
 // app/BookReader/BookReader.js
 
 import React, { Component } from 'react';
@@ -6,7 +7,9 @@ import {
   Text,
   View,
   Dimensions,
-  Image
+  Image,
+  Props,
+  State
 } from 'react-native';
 
 import { Actions } from 'react-native-router-flux';
@@ -18,21 +21,26 @@ import MainPanel from './panels/MainPanel'
 import PlayButton from './PlayButton'
 import BookControl from './BookControl'
 
+import {getAuthorizationHeaders} from '../../../RESTAccess.js';
+
 class BookReader extends Component {
-  constructor(props) {
+  state:State
+  constructor(props:Props) {
     super(props)
 
     var {width, height} = Dimensions.get('window');
     this.dimensions = {
       width: width + 30,
       height: height
-    }
+    };
     var bookData = require('./resources/BookData.json');
     this.picAspectRatio = bookData.aspectRatio;
     this.picWidth = height * this.picAspectRatio;
     this.pagesData = bookData.pages;
 
     this.state = {
+      authHeaders: {},
+      baseURI: bookData.baseURI,
       pageNumber: 0,
       character: "",
       language: "",
@@ -45,13 +53,23 @@ class BookReader extends Component {
     this._onChangePage = this._onChangePage.bind(this);
   }
 
+  componentWillMount(){
+    getAuthorizationHeaders()
+    .then(function(headers){
+      this.setState({authHeaders:headers});
+    }.bind(this))
+    .catch(function(){
+      Actions.logInPage();
+    });
+  }
+
   render() {
     return (
       <View style={{flex:1, flexDirection:'row'}}>
         <MainPanel
           style={styles.interactionPanel}
           onPressHome={() => {
-            Actions.bookInfoPage()
+            Actions.homePage()
           }}
           onPressCharacter={
             function(newCharacter){
@@ -71,6 +89,8 @@ class BookReader extends Component {
         />
         <BookControl
           ref="bookControl"
+          authHeaders={this.state.authHeaders}
+          baseURI={this.state.baseURI}
           style={styles.bookControl}
           pagesData={this.pagesData}
           screenWidth={this.dimensions.width}
